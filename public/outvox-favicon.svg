@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <defs>
+    <!-- Glowing Ring Gradient -->
+    <linearGradient id="ringGrad" x1="0%" y1="80%" x2="100%" y2="20%">
+      <stop offset="0%" stop-color="#FF5500" />
+      <stop offset="30%" stop-color="#FF6600" />
+      <stop offset="70%" stop-color="#0055FF" />
+      <stop offset="100%" stop-color="#0099FF" />
+    </linearGradient>
+
+    <!-- Ring Glow Filter -->
+    <filter id="ringGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComponentTransfer in="blur" result="boost">
+        <feFuncA type="linear" slope="1.8"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode in="boost" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Text Shadow Filter -->
+    <filter id="textShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="5" stdDeviation="4" flood-color="#000000" flood-opacity="0.6" />
+    </filter>
+  </defs>
+
+  <!-- Subtle inner radial depth glow -->
+  <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#0055FF" stop-opacity="0.12" />
+    <stop offset="100%" stop-color="#030811" stop-opacity="0" />
+  </radialGradient>
+  <circle cx="250" cy="250" r="198" fill="url(#bgGlow)" />
+
+  <!-- Outer Glass Reflection Ring (Subtle 3D edge) -->
+  <circle cx="250" cy="250" r="202" fill="none" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1" />
+
+  <!-- Main Glowing Ring (Background Blur for Glow) -->
+  <circle cx="250" cy="250" r="196" fill="none" stroke="url(#ringGrad)" stroke-width="10" filter="url(#ringGlow)" opacity="0.9" />
+
+  <!-- Inner Edge Ring Reflection (Subtle 3D) -->
+  <circle cx="250" cy="250" r="190" fill="none" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1" />
+
+  <!-- Centered Logo Text "OUTVOX" -->
+  <text x="250" y="258" text-anchor="middle" font-family="'Outfit', 'Inter', 'Segoe UI', sans-serif" font-weight="800" font-size="82" letter-spacing="-1.5" filter="url(#textShadow)">
+    <tspan fill="#FF5500">OUT</tspan><tspan fill="#0077FF">VOX</tspan>
+  </text>
+
+  <!-- Centered Subtext "SOLUTION" -->
+  <text x="256" y="320" text-anchor="middle" font-family="'Outfit', 'Inter', 'Segoe UI', sans-serif" font-weight="600" font-size="24" fill="#8B9BB4" letter-spacing="12" filter="url(#textShadow)">SOLUTION</text>
+</svg>
