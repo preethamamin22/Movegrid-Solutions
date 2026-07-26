@@ -18,7 +18,7 @@ export default function Contact() {
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '30px' }}>
               <div style={{ display: 'flex', alignItems: 'flex-start', gap: '20px' }}>
-                <div style={{ width: '50px', height: '50px', background: 'rgba(0, 102, 204, 0.1)', color: 'var(--primary)', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                <div style={{ width: '50px', height: '50px', background: 'var(--bg-lighter)', color: 'var(--primary)', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                   <MapPin size={24} />
                 </div>
                 <div>
@@ -28,7 +28,7 @@ export default function Contact() {
               </div>
               
               <div style={{ display: 'flex', alignItems: 'flex-start', gap: '20px' }}>
-                <div style={{ width: '50px', height: '50px', background: 'rgba(0, 102, 204, 0.1)', color: 'var(--primary)', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                <div style={{ width: '50px', height: '50px', background: 'var(--bg-lighter)', color: 'var(--primary)', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                   <Phone size={24} />
                 </div>
                 <div>
@@ -38,7 +38,7 @@ export default function Contact() {
               </div>
 
               <div style={{ display: 'flex', alignItems: 'flex-start', gap: '20px' }}>
-                <div style={{ width: '50px', height: '50px', background: 'rgba(0, 102, 204, 0.1)', color: 'var(--primary)', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                <div style={{ width: '50px', height: '50px', background: 'var(--bg-lighter)', color: 'var(--primary)', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                   <Mail size={24} />
                 </div>
                 <div>
@@ -57,32 +57,32 @@ export default function Contact() {
               <div className="contact-name-grid">
                 <div>
                   <label style={{ display: 'block', marginBottom: '8px', fontSize: '0.9rem', color: 'var(--text-muted)' }}>First Name</label>
-                  <input type="text" placeholder="John" style={{ width: '100%', padding: '14px', background: 'rgba(255, 255, 255, 0.05)', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '8px', color: '#fff', outline: 'none' }} />
+                  <input type="text" placeholder="John" style={{ width: '100%', padding: '14px', background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '8px', color: '#ffffff', outline: 'none' }} />
                 </div>
                 <div>
                   <label style={{ display: 'block', marginBottom: '8px', fontSize: '0.9rem', color: 'var(--text-muted)' }}>Last Name</label>
-                  <input type="text" placeholder="Doe" style={{ width: '100%', padding: '14px', background: 'rgba(255, 255, 255, 0.05)', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '8px', color: '#fff', outline: 'none' }} />
+                  <input type="text" placeholder="Doe" style={{ width: '100%', padding: '14px', background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '8px', color: '#ffffff', outline: 'none' }} />
                 </div>
               </div>
               
               <div>
                 <label style={{ display: 'block', marginBottom: '8px', fontSize: '0.9rem', color: 'var(--text-muted)' }}>Email Address</label>
-                <input type="email" placeholder="john@example.com" style={{ width: '100%', padding: '14px', background: 'rgba(255, 255, 255, 0.05)', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '8px', color: '#fff', outline: 'none' }} />
+                <input type="email" placeholder="john@example.com" style={{ width: '100%', padding: '14px', background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '8px', color: '#ffffff', outline: 'none' }} />
               </div>
               
               <div>
                 <label style={{ display: 'block', marginBottom: '8px', fontSize: '0.9rem', color: 'var(--text-muted)' }}>Service Interested In</label>
-                <select style={{ width: '100%', padding: '14px', background: 'rgba(255, 255, 255, 0.05)', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '8px', color: '#fff', outline: 'none', appearance: 'none' }}>
-                  <option value="" disabled defaultValue style={{ color: '#000' }}>Select a service</option>
-                  <option value="telecalling" style={{ color: '#000' }}>Telecalling</option>
-                  <option value="ecommerce" style={{ color: '#000' }}>E-commerce Support</option>
-                  <option value="web" style={{ color: '#000' }}>Web Development</option>
+                <select style={{ width: '100%', padding: '14px', background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '8px', color: '#ffffff', outline: 'none', appearance: 'none' }}>
+                  <option value="" disabled defaultValue style={{ color: '#ffffff', background: '#0a0616' }}>Select a service</option>
+                  <option value="telecalling" style={{ color: '#ffffff', background: '#0a0616' }}>Telecalling</option>
+                  <option value="ecommerce" style={{ color: '#ffffff', background: '#0a0616' }}>E-commerce Support</option>
+                  <option value="web" style={{ color: '#ffffff', background: '#0a0616' }}>Web Development</option>
                 </select>
               </div>
 
               <div>
                 <label style={{ display: 'block', marginBottom: '8px', fontSize: '0.9rem', color: 'var(--text-muted)' }}>Message</label>
-                <textarea rows="4" placeholder="Tell us about your project..." style={{ width: '100%', padding: '14px', background: 'rgba(255, 255, 255, 0.05)', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '8px', color: '#fff', outline: 'none', resize: 'vertical' }}></textarea>
+                <textarea rows="4" placeholder="Tell us about your project..." style={{ width: '100%', padding: '14px', background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '8px', color: '#ffffff', outline: 'none', resize: 'vertical' }}></textarea>
               </div>
 
               <button type="submit" className="btn btn-primary" style={{ width: '100%', marginTop: '10px' }}>

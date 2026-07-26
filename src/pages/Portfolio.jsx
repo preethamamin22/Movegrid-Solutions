@@ -90,7 +90,7 @@ export default function Portfolio() {
 
               {/* Project Details */}
               <div style={{ padding: '24px', flex: 1, display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                <h3 style={{ fontSize: '1.3rem', color: '#fff', margin: 0 }}>{project.title}</h3>
+                <h3 style={{ fontSize: '1.3rem', color: 'var(--text-main)', margin: 0 }}>{project.title}</h3>
                 <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', margin: 0, lineHeight: '1.6', flex: 1 }}>
                   {project.desc}
                 </p>

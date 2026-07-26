@@ -39,16 +39,16 @@ export default function Pricing() {
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '30px', alignItems: 'center' }}>
           {plans.map((plan, idx) => (
-            <div key={idx} className={`glass-panel animate-fade-up delay-${idx+1}`} style={{ padding: '40px 30px', position: 'relative', border: plan.highlight ? '1px solid var(--primary)' : '', boxShadow: plan.highlight ? '0 10px 40px rgba(0, 102, 204, 0.15)' : '' }}>
+            <div key={idx} className={`glass-panel animate-fade-up delay-${idx+1}`} style={{ padding: '40px 30px', position: 'relative', border: plan.highlight ? '1px solid var(--primary)' : '', boxShadow: plan.highlight ? '0 10px 30px rgba(153, 118, 207, 0.15)' : '' }}>
               {plan.highlight && (
-                <div style={{ position: 'absolute', top: 0, left: '50%', transform: 'translate(-50%, -50%)', background: 'var(--gradient-blue)', color: '#fff', padding: '6px 16px', borderRadius: '20px', fontSize: '0.85rem', fontWeight: 'bold', letterSpacing: '1px', whiteSpace: 'nowrap' }}>
+                <div style={{ position: 'absolute', top: 0, left: '50%', transform: 'translate(-50%, -50%)', background: 'var(--primary)', color: 'var(--bg-color)', padding: '6px 16px', borderRadius: '20px', fontSize: '0.85rem', fontWeight: 'bold', letterSpacing: '1px', whiteSpace: 'nowrap' }}>
                   MOST POPULAR
                 </div>
               )}
               <h3 style={{ fontSize: '1.8rem', marginBottom: '10px' }}>{plan.name}</h3>
               <p style={{ color: 'var(--text-muted)', marginBottom: '30px', minHeight: '48px' }}>{plan.desc}</p>
               <div style={{ marginBottom: '30px' }}>
-                <span style={{ fontSize: '2.5rem', fontWeight: 'bold', color: plan.highlight ? 'var(--primary)' : '#fff' }}>{plan.price}</span>
+                <span style={{ fontSize: '2.5rem', fontWeight: 'bold', color: 'var(--text-main)' }}>{plan.price}</span>
                 <span style={{ color: 'var(--text-muted)' }}>{plan.period}</span>
               </div>
               <ul style={{ listStyle: 'none', marginBottom: '40px', display: 'flex', flexDirection: 'column', gap: '15px' }}>
