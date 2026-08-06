@@ -47,13 +47,13 @@ export default function Footer() {
     },
     {
       icon: <InstagramIcon />,
-      href: 'https://www.instagram.com/outvoxsolution?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==',
+      href: 'https://www.instagram.com/outvo_xsolution?igsh=MTJva2ZuNmk4emxyNw==',
       label: 'Instagram',
       color: '#E1306C',
     },
     {
       icon: <LinkedInIcon />,
-      href: 'https://www.linkedin.com/company/outvoxsolution',
+      href: 'https://www.linkedin.com/company/outvox-solution/',
       label: 'LinkedIn',
       color: '#0A66C2',
     },

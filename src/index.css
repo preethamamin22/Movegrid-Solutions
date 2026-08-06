@@ -640,7 +640,7 @@ footer {
 
   /* WhatsApp */
   .whatsapp-float {
-    bottom: 20px;
+    bottom: 80px; /* Increased to avoid overlapping mobile footer */
     right: 20px;
     width: 52px;
     height: 52px;
@@ -676,6 +676,15 @@ footer {
 
   .nav-logo-img {
     height: 36px;
+  }
+}
+
+/* =====================
+   BENTO GRID RESPONSIVE FIX
+   ===================== */
+@media (max-width: 768px) {
+  .bento-grid {
+    gap: 16px !important;
   }
 }
 
