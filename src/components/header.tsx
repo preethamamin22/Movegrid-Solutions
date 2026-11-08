@@ -8,7 +8,7 @@ import { Brand } from './brand';
 
 const navItems = [
   { label: 'Overview', href: '/' },
-  { label: 'Rider Onboarding', href: '/services/rider-onboarding', badge: 'Dark Stores' },
+  { label: 'Rider Onboarding', href: '/rider-onboarding', badge: 'Dark Stores' },
   { label: 'Services', href: '/services' },
   { label: 'Work', href: '/work' },
   { label: 'About', href: '/about' },
