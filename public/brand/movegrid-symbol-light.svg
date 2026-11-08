@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="sym_grad_lt" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#0EA5E9"/>
+    </linearGradient>
+  </defs>
+  <!-- Light background container -->
+  <rect width="64" height="64" rx="18" fill="#F8FAFF"/>
+  <rect width="62" height="62" x="1" y="1" rx="17" stroke="#E2E8F0" stroke-width="1.5"/>
+  <!-- M Geometry in Deep Navy -->
+  <path d="M15 44V23l12 11 5-6 5 6 12-11v21" stroke="#0F172A" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Dynamic forward movement accent -->
+  <path d="M37 34l12-11" stroke="url(#sym_grad_lt)" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="49" cy="23" r="4" fill="#0EA5E9"/>
+  <!-- Subtle Grid Nodes -->
+  <circle cx="15" cy="23" r="2.5" fill="rgba(15,23,42,0.3)"/>
+  <circle cx="27" cy="34" r="2.5" fill="rgba(15,23,42,0.3)"/>
+  <circle cx="32" cy="28" r="3" fill="#4F46E5"/>
+</svg>
+
