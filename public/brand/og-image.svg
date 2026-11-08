@@ -1,0 +1,92 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B14" />
+      <stop offset="50%" stop-color="#0A1122" />
+      <stop offset="100%" stop-color="#060913" />
+    </linearGradient>
+    <linearGradient id="symbolGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#2563EB" />
+    </linearGradient>
+    <linearGradient id="glow" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#2563EB" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)" />
+
+  <!-- Ambient light -->
+  <circle cx="200" cy="180" r="300" fill="url(#glow)" filter="blur(60px)" />
+  <circle cx="1050" cy="500" r="250" fill="url(#glow)" filter="blur(80px)" />
+
+  <!-- Subtle Grid Texture -->
+  <g opacity="0.06" stroke="#FFFFFF" stroke-width="1">
+    <line x1="80" y1="0" x2="80" y2="630" />
+    <line x1="240" y1="0" x2="240" y2="630" />
+    <line x1="400" y1="0" x2="400" y2="630" />
+    <line x1="560" y1="0" x2="560" y2="630" />
+    <line x1="720" y1="0" x2="720" y2="630" />
+    <line x1="880" y1="0" x2="880" y2="630" />
+    <line x1="1040" y1="0" x2="1040" y2="630" />
+    <line x1="0" y1="120" x2="1200" y2="120" />
+    <line x1="0" y1="240" x2="1200" y2="240" />
+    <line x1="0" y1="360" x2="1200" y2="360" />
+    <line x1="0" y1="480" x2="1200" y2="480" />
+  </g>
+
+  <!-- Brand Mark (Symbol) -->
+  <g transform="translate(100, 100)">
+    <rect width="80" height="80" rx="20" fill="#0D1322" stroke="rgba(255,255,255,0.12)" stroke-width="2" />
+    <path d="M22 60V22L40 39L58 22V60M31 60V42L40 50L49 42V60" stroke="url(#symbolGrad)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+
+  <!-- Brand Wordmark -->
+  <g transform="translate(200, 138)">
+    <text font-family="'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif" font-weight="800" font-size="34" letter-spacing="-0.5" fill="#FFFFFF">
+      MOVE<tspan fill="#38BDF8">GRID</tspan>
+    </text>
+    <text x="0" y="24" font-family="'Inter', sans-serif" font-weight="600" font-size="12" letter-spacing="4" fill="#94A3B8">
+      SOLUTIONS
+    </text>
+  </g>
+
+  <!-- Headline -->
+  <text x="100" y="290" font-family="'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif" font-weight="800" font-size="56" letter-spacing="-1.5" fill="#FFFFFF">
+    Moving Businesses Forward.
+  </text>
+
+  <!-- Subheadline -->
+  <text x="100" y="345" font-family="'Inter', sans-serif" font-weight="400" font-size="24" fill="#94A3B8">
+    Digital Innovation · Smarter Operations · Creative Growth
+  </text>
+
+  <!-- 3 Business Divisions Pill Row -->
+  <g transform="translate(100, 420)">
+    <!-- Pill 1 -->
+    <rect x="0" y="0" width="310" height="74" rx="14" fill="#0D1322" stroke="rgba(255,255,255,0.08)" stroke-width="1.5" />
+    <text x="24" y="32" font-family="'Inter', sans-serif" font-weight="700" font-size="11" letter-spacing="1.5" fill="#38BDF8">01 DIGITAL STUDIO</text>
+    <text x="24" y="54" font-family="'Inter', sans-serif" font-weight="500" font-size="15" fill="#FFFFFF">Web Development &amp; UI/UX</text>
+
+    <!-- Pill 2 -->
+    <rect x="330" y="0" width="330" height="74" rx="14" fill="#0D1322" stroke="rgba(255,255,255,0.08)" stroke-width="1.5" />
+    <text x="354" y="32" font-family="'Inter', sans-serif" font-weight="700" font-size="11" letter-spacing="1.5" fill="#38BDF8">02 OPERATIONS</text>
+    <text x="354" y="54" font-family="'Inter', sans-serif" font-weight="500" font-size="15" fill="#FFFFFF">Rider &amp; Vendor Onboarding</text>
+
+    <!-- Pill 3 -->
+    <rect x="680" y="0" width="320" height="74" rx="14" fill="#0D1322" stroke="rgba(255,255,255,0.08)" stroke-width="1.5" />
+    <text x="704" y="32" font-family="'Inter', sans-serif" font-weight="700" font-size="11" letter-spacing="1.5" fill="#A855F7">03 CREATIVE &amp; GROWTH</text>
+    <text x="704" y="54" font-family="'Inter', sans-serif" font-weight="500" font-size="15" fill="#FFFFFF">Digital Marketing &amp; Video</text>
+  </g>
+
+  <!-- Footer Info Line -->
+  <line x1="100" y1="550" x2="1100" y2="550" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+  <text x="100" y="585" font-family="'Inter', sans-serif" font-weight="500" font-size="14" fill="#64748B">
+    movegridsolutions.com · preetham@movegridsolutions.com · +91 82967 48983
+  </text>
+  <text x="1100" y="585" text-anchor="end" font-family="'Inter', sans-serif" font-weight="600" font-size="14" fill="#38BDF8">
+    India &amp; Global Operations
+  </text>
+</svg>

@@ -38,10 +38,10 @@ export const metadata: Metadata = {
     url: base,
     images: [
       {
-        url: '/brand/movegrid-symbol.svg',
-        width: 800,
-        height: 800,
-        alt: 'Movegrid Solutions Logo',
+        url: '/brand/og-image.svg',
+        width: 1200,
+        height: 630,
+        alt: 'Movegrid Solutions — Moving Businesses Forward',
       },
     ],
   },
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     title: 'Movegrid Solutions | Moving Businesses Forward',
     description:
       'Digital Innovation. Smarter Operations. Creative Growth. Connecting technology, logistics and brand storytelling.',
-    images: ['/brand/movegrid-symbol.svg'],
+    images: ['/brand/og-image.svg'],
   },
   alternates: { canonical: base },
   icons: {
