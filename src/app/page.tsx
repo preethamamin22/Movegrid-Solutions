@@ -8,9 +8,6 @@ import {
   Layers,
   Workflow,
   TrendingUp,
-  ShieldCheck,
-  Zap,
-  Users2,
   ChevronDown,
   MessageCircle,
 } from 'lucide-react';
