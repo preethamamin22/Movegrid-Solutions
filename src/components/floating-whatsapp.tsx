@@ -21,10 +21,10 @@ export function FloatingWhatsApp() {
       }}
     >
       <a
-        href="https://wa.me/918296748983?text=Hi%20Movegrid%20Solutions%2C%20I%20have%20an%20inquiry%20about%20your%20services"
+        href="https://wa.me/918296748983?text=Hi%20Movegrid%20Operations%2C%20I%20have%20an%20inquiry%20regarding%20fleet%20onboarding%20or%20business%20services"
         target="_blank"
         rel="noreferrer"
-        aria-label="Chat with Movegrid Solutions on WhatsApp"
+        aria-label="Chat with Movegrid Operations on WhatsApp"
         style={{
           display: 'flex',
           alignItems: 'center',
@@ -51,7 +51,7 @@ export function FloatingWhatsApp() {
         }}
       >
         <MessageCircle size={20} fill="#ffffff" />
-        <span className="hidden sm:inline">WhatsApp Us</span>
+        <span className="hidden sm:inline">WhatsApp Ops</span>
       </a>
 
       <button

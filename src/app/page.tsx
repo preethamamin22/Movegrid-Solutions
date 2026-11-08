@@ -10,6 +10,12 @@ import {
   TrendingUp,
   ChevronDown,
   MessageCircle,
+  Users,
+  ShieldCheck,
+  Zap,
+  Clock,
+  CheckCircle2,
+  Building2,
 } from 'lucide-react';
 import { services } from '@/lib/data';
 import { ServiceCard } from '@/components/service-card';
@@ -52,28 +58,29 @@ export default function Home() {
         <div className="container max-w-4xl text-center mx-auto">
           <div className="inline-flex justify-center mb-6">
             <div className="minimal-pill">
-              <span className="minimal-pill-dot" />
-              <span>Multi-Service Business Solutions</span>
+              <span className="minimal-pill-dot bg-emerald-400" />
+              <span>Enterprise Fleet Partner · Quick-Commerce &amp; Digital Solutions</span>
             </div>
           </div>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6 text-white leading-tight">
             Moving Businesses Forward Through{' '}
-            <span className="text-blue-400">Digital Innovation.</span>
+            <span className="text-blue-400">Digital Innovation</span> &amp;{' '}
+            <span className="text-cyan-400">Fleet Operations.</span>
           </h1>
 
           <p className="text-base sm:text-lg text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-            From powerful digital experiences to scalable operational support and creative marketing, Movegrid Solutions helps businesses build, grow and move forward.
+            From high-velocity rider onboarding for 10-minute dark stores and last-mile hubs (Zepto, Blinkit, Flipkart ecosystem) to corporate web engineering and creative growth—Movegrid delivers.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 mb-20">
-            <Link href="/services" className="btn-primary !py-3 !px-7 text-sm w-full sm:w-auto">
-              <span>Explore Our Services</span>
-              <ArrowRight size={15} />
+            <Link href="/services/rider-onboarding" className="btn-primary !py-3 !px-7 text-sm w-full sm:w-auto">
+              <Users size={16} />
+              <span>Onboard Delivery Fleet</span>
             </Link>
 
-            <Link href="/contact" className="btn-secondary !py-3 !px-7 text-sm w-full sm:w-auto">
-              <span>Let&apos;s Discuss Your Project</span>
+            <Link href="/services" className="btn-secondary !py-3 !px-7 text-sm w-full sm:w-auto">
+              <span>Explore All Capabilities</span>
               <ArrowUpRight size={15} />
             </Link>
           </div>
@@ -88,12 +95,15 @@ export default function Home() {
               <p className="text-xs text-slate-400">High-performance corporate sites, custom web apps, and design systems.</p>
             </div>
 
-            <div className="p-4 rounded-xl bg-white/[0.02] border border-white/5">
+            <div className="p-4 rounded-xl bg-cyan-500/[0.04] border border-cyan-500/20 relative">
+              <span className="absolute top-3 right-3 text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-400">
+                High Velocity
+              </span>
               <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-cyan-400 mb-1">
                 <Workflow size={14} /> 02 Operations &amp; Fleet
               </div>
-              <div className="text-sm font-semibold text-white mb-0.5">Rider &amp; Vendor Onboarding</div>
-              <p className="text-xs text-slate-400">Logistics partner recruitment, KYC collection, and supplier coordination.</p>
+              <div className="text-sm font-semibold text-white mb-0.5">Rider &amp; Dark Store Onboarding</div>
+              <p className="text-xs text-slate-300">Fast 24-48h rider sourcing, KYC verification, and dark store staffing.</p>
             </div>
 
             <div className="p-4 rounded-xl bg-white/[0.02] border border-white/5">
@@ -102,6 +112,116 @@ export default function Home() {
               </div>
               <div className="text-sm font-semibold text-white mb-0.5">Digital Campaigns &amp; Video</div>
               <p className="text-xs text-slate-400">Targeted lead generation funnels, corporate films, and social content.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── ENTERPRISE FLEET OPERATIONS SPOTLIGHT ───────────────── */}
+      <section id="fleet-operations" className="py-20 border-t border-white/5 bg-[#060B16] relative">
+        <div className="container">
+          <div className="max-w-3xl mb-12">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-bold uppercase tracking-wider mb-3">
+              <Zap size={13} />
+              <span>Enterprise Fleet Logistics</span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 leading-tight">
+              High-Velocity Rider Onboarding for Dark Stores &amp; Quick Commerce
+            </h2>
+            <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
+              Purpose-built for 10-minute grocery dark stores (Zepto, Blinkit, Instamart), e-commerce same-day sortation hubs (Flipkart Minutes, Flipkart, Amazon), and hyperlocal intra-city courier networks.
+            </p>
+          </div>
+
+          {/* Ecosystem Badges */}
+          <div className="flex flex-wrap items-center gap-2 mb-10 text-xs font-medium text-slate-300">
+            <span className="text-slate-500">Targeted Ecosystems:</span>
+            <span className="px-3 py-1 rounded-md bg-white/5 border border-white/10 text-white">
+              ⚡ 10-Minute Dark Stores (Zepto, Blinkit, Instamart)
+            </span>
+            <span className="px-3 py-1 rounded-md bg-white/5 border border-white/10 text-white">
+              📦 E-Commerce Last-Mile Hubs (Flipkart, Amazon)
+            </span>
+            <span className="px-3 py-1 rounded-md bg-white/5 border border-white/10 text-white">
+              🛵 Intra-City Courier Fleets (Porter, Shadowfax, Borzo)
+            </span>
+          </div>
+
+          {/* 4 Performance Pillars */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
+            <div className="p-5 rounded-xl bg-white/[0.02] border border-white/5 hover:border-cyan-500/30 transition-all">
+              <div className="w-9 h-9 rounded-lg bg-cyan-500/10 text-cyan-400 flex items-center justify-center mb-4">
+                <Clock size={18} />
+              </div>
+              <h3 className="text-base font-bold text-white mb-1.5">24–48h Turnaround</h3>
+              <p className="text-xs text-slate-400 leading-relaxed">
+                Pre-screened rider pipelines ready for rapid deployment when opening new dark stores or handling peak volume surges.
+              </p>
+            </div>
+
+            <div className="p-5 rounded-xl bg-white/[0.02] border border-white/5 hover:border-cyan-500/30 transition-all">
+              <div className="w-9 h-9 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-4">
+                <ShieldCheck size={18} />
+              </div>
+              <h3 className="text-base font-bold text-white mb-1.5">100% Verified KYC &amp; BGV</h3>
+              <p className="text-xs text-slate-400 leading-relaxed">
+                Zero-compromise digital audit trail: Aadhaar, Driving License, PAN, Vehicle RC, smartphone readiness, and background verification.
+              </p>
+            </div>
+
+            <div className="p-5 rounded-xl bg-white/[0.02] border border-white/5 hover:border-cyan-500/30 transition-all">
+              <div className="w-9 h-9 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center mb-4">
+                <Building2 size={18} />
+              </div>
+              <h3 className="text-base font-bold text-white mb-1.5">EV &amp; 2-Wheeler Fleets</h3>
+              <p className="text-xs text-slate-400 leading-relaxed">
+                Active sourcing of riders with their own vehicles and seamless alignment with commercial EV battery-swapping networks.
+              </p>
+            </div>
+
+            <div className="p-5 rounded-xl bg-white/[0.02] border border-white/5 hover:border-cyan-500/30 transition-all">
+              <div className="w-9 h-9 rounded-lg bg-purple-500/10 text-purple-400 flex items-center justify-center mb-4">
+                <CheckCircle2 size={18} />
+              </div>
+              <h3 className="text-base font-bold text-white mb-1.5">Day-1 Hub Activation</h3>
+              <p className="text-xs text-slate-400 leading-relaxed">
+                On-ground field coordinators ensure riders report to the designated dark store, complete order app training, and activate immediately.
+              </p>
+            </div>
+          </div>
+
+          {/* Quick SLA & RFP Banner */}
+          <div className="p-6 md:p-8 rounded-2xl bg-gradient-to-r from-blue-950/40 via-[#0A1628] to-slate-900/40 border border-blue-500/20 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+            <div>
+              <div className="text-xs font-bold uppercase tracking-wider text-cyan-400 mb-1">
+                Opening New Dark Stores or Scaling Fleet Capacity?
+              </div>
+              <h4 className="text-xl font-bold text-white mb-2">
+                Deploy 20 to 500+ Verified Riders with SLA Guarantee
+              </h4>
+              <p className="text-xs sm:text-sm text-slate-300 max-w-xl">
+                Active coverage across Bengaluru, Delhi NCR, Mumbai, Hyderabad, Pune, Chennai, and emerging Tier 1/2 hubs with guaranteed replacement SLAs.
+              </p>
+            </div>
+
+            <div className="flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto">
+              <a
+                href="https://wa.me/918296748983?text=Hi%20Movegrid%20Operations%2C%20we%20need%20rider%20onboarding%20support%20for%20our%20dark%20stores"
+                target="_blank"
+                rel="noreferrer"
+                className="btn-primary !py-2.5 !px-5 text-xs w-full sm:w-auto whitespace-nowrap !bg-emerald-600 hover:!bg-emerald-500 !border-emerald-500/40"
+              >
+                <MessageCircle size={15} />
+                <span>Talk to Fleet Ops on WhatsApp</span>
+              </a>
+
+              <Link
+                href="/services/rider-onboarding"
+                className="btn-secondary !py-2.5 !px-5 text-xs w-full sm:w-auto whitespace-nowrap"
+              >
+                <span>View Full Fleet SLA</span>
+                <ArrowRight size={14} />
+              </Link>
             </div>
           </div>
         </div>

@@ -92,13 +92,16 @@ export default function ServicesPage() {
             </span>
           </div>
 
-          <div className="max-w-2xl mb-12">
+          <div className="max-w-2xl mb-8">
             <h2 className="text-3xl sm:text-4xl font-extrabold mb-3 text-white">
               Operations &amp; Partnerships
             </h2>
-            <p className="text-slate-400 text-sm leading-relaxed">
-              Practical workforce sourcing, verified rider recruitment coordination, and vendor onboarding assistance for growing delivery and supplier networks.
+            <p className="text-slate-400 text-sm leading-relaxed mb-4">
+              High-velocity delivery partner recruitment, verified KYC document collection, dark store staffing, and vendor network management for logistics and e-commerce leaders.
             </p>
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 text-xs font-medium">
+              <span>⚡ Specialized Dark Store &amp; Fleet Staffing for Zepto, Blinkit, Flipkart &amp; Hyperlocal Hubs</span>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

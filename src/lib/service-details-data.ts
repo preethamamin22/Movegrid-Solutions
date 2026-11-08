@@ -114,52 +114,64 @@ export const serviceDetailsMap: Record<string, ServiceDetailContent> = {
   'rider-onboarding': {
     benefits: [
       {
-        title: 'Hyperlocal Sourcing Channels',
-        desc: 'Multi-channel recruitment pipelines across targeted metropolitan and Tier-2 clusters to secure active delivery partners.',
+        title: 'Dark Store & Q-Commerce Velocity',
+        desc: 'Specialized 24-48 hour turnaround mobilization for 10-minute dark stores and last-mile sortation hubs with guaranteed shift staffing.',
       },
       {
-        title: 'Rigorous Verification Coordination',
-        desc: 'Streamlined collection and verification assistance for KYC, driving licenses, vehicle documents, and bank details.',
+        title: '100% Verified Digital KYC & BGV',
+        desc: 'Zero-compromise verification pipelines covering Aadhaar, Driving License, PAN, Vehicle RC, smartphone check, and background verification.',
       },
       {
-        title: 'Faster Time-to-First-Delivery',
-        desc: 'Structured onboarding and activation briefings that minimize drop-offs and accelerate first-order completion.',
+        title: 'EV & 2-Wheeler Fleet Pipelines',
+        desc: 'Multi-channel sourcing of delivery partners with their own 2-wheelers or integrated with commercial EV battery-swapping ecosystems.',
+      },
+      {
+        title: 'Day-1 Shift Attendance & Bag Handover',
+        desc: 'On-ground hub coordinators ensure riders report on time, complete dispatch app training, receive kit/bag distribution, and complete first orders.',
       },
     ],
     process: [
       {
         step: '01',
-        title: 'Demand Planning & Sourcing',
-        desc: 'Aligning with your fleet targets by geography, vehicle type (2-wheeler, EV), and operational shift hours.',
+        title: 'Dark Store Demand Mapping',
+        desc: 'Aligning rider targets by micro-market PIN codes, shift requirements (morning, peak evening, night), vehicle types, and launch dates.',
       },
       {
         step: '02',
-        title: 'Candidate Screening & Sourcing',
-        desc: 'Candidate outreach, preliminary eligibility checks, and orientation scheduling.',
+        title: 'Hyperlocal Sourcing & Field Drives',
+        desc: 'Deploying digital recruitment ads, field mobilization drives, and referral networks across Tier 1 & Tier 2 logistics clusters.',
       },
       {
         step: '03',
-        title: 'Document Collection Coordination',
-        desc: 'Systematic collection of IDs, driving licenses, vehicle RC, bank account data, and compliance records.',
+        title: 'Rigorous Document & KYC Verification',
+        desc: 'Systematic digital collection and validation of Aadhaar, DL, PAN, vehicle RC, bank account details, and address verification.',
       },
       {
         step: '04',
-        title: 'Activation & Onboarding Support',
-        desc: 'App installation guidance, platform orientation, safety briefing, and active fleet tracking.',
+        title: 'Hub Reporting & Day-1 Activation',
+        desc: 'Coordinating physical reporting at the client dark store, partner app onboarding, safety training, and tracking initial order fulfillment.',
       },
     ],
     faqs: [
       {
-        q: 'Which sectors do you provide rider onboarding for?',
-        a: 'We support logistics networks, quick-commerce groceries, food delivery platforms, e-commerce courier fleets, and hyper-local delivery startups.',
+        q: 'How fast can Movegrid staff a newly launching dark store?',
+        a: 'We mobilize batches of 20 to 100+ verified riders per hub within 24 to 48 hours, enabling quick-commerce operators to launch dark stores on schedule without staffing bottlenecks.',
       },
       {
-        q: 'How do you ensure candidate document compliance?',
-        a: 'We implement standardized verification checklists ensuring that KYC, driver permits, and vehicle documents are cross-checked before partner activation.',
+        q: 'Which platforms and ecosystems do you support?',
+        a: 'We specialize in quick-commerce grocery dark stores (such as Zepto, Blinkit, and Instamart), e-commerce same-day delivery hubs (Flipkart Minutes, Flipkart, Amazon), and hyperlocal intra-city courier fleets (Porter, Shadowfax).',
       },
       {
-        q: 'Can you scale up sourcing for festival or peak sales periods?',
-        a: 'Yes, we specialize in high-velocity surge staffing and seasonal recruitment coordination across multiple city hubs.',
+        q: 'What compliance records and background checks are provided?',
+        a: 'We provide an enterprise audit trail containing verified Aadhaar details, valid driving licenses, vehicle RC documents, bank account proof, and background verification clearances prior to partner dispatch.',
+      },
+      {
+        q: 'How do you handle rider churn and peak festive volume surges?',
+        a: 'We maintain continuous warm candidate pipelines across key city clusters, allowing rapid replacement within 24 hours and flexible scaling during sales festivals, monsoons, and holiday spikes.',
+      },
+      {
+        q: 'Which cities do you currently cover for rider recruitment?',
+        a: 'Our on-ground operations active coverage spans major logistics metros including Bengaluru, Delhi NCR (Gurugram, Noida, Delhi), Mumbai, Hyderabad, Pune, Chennai, and key emerging Tier-2 hubs.',
       },
     ],
   },

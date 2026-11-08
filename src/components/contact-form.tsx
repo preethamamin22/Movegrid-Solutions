@@ -1,7 +1,7 @@
 'use client';
 
-import { useState } from 'react';
-import { ArrowUpRight, CheckCircle2, MessageCircle, Mail } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { ArrowUpRight, CheckCircle2, MessageCircle, Mail, Zap } from 'lucide-react';
 import { services } from '@/lib/data';
 
 export function ContactForm() {
@@ -14,6 +14,44 @@ export function ContactForm() {
     service: '',
     details: '',
   });
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      const serviceParam = params.get('service');
+      if (serviceParam) {
+        if (serviceParam.toLowerCase().includes('rider')) {
+          setFormData((prev) => ({
+            ...prev,
+            service: 'Rider Onboarding & Dark Store Fleet',
+            details: prev.details || 'We need rider onboarding and fleet sourcing support for our dark stores / delivery hubs.',
+          }));
+        }
+      }
+    }
+  }, []);
+
+  const selectPreset = (type: 'fleet' | 'digital' | 'creative') => {
+    if (type === 'fleet') {
+      setFormData((prev) => ({
+        ...prev,
+        service: 'Rider Onboarding & Dark Store Fleet',
+        details: 'We are expanding dark stores / delivery hubs and need reliable rider sourcing, KYC verification, and Day-1 attendance. Locations: [Enter cities/PIN codes]. Target riders: [e.g. 50-100].',
+      }));
+    } else if (type === 'digital') {
+      setFormData((prev) => ({
+        ...prev,
+        service: 'Web Design & Development',
+        details: 'We are looking to design and build a modern corporate website / web platform.',
+      }));
+    } else {
+      setFormData((prev) => ({
+        ...prev,
+        service: 'Digital Marketing',
+        details: 'We are looking for multi-channel digital marketing and video production to drive brand growth.',
+      }));
+    }
+  };
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -33,13 +71,13 @@ export function ContactForm() {
     );
     const body = encodeURIComponent(
       `Hello Movegrid Team,\n\n` +
-        `Name: ${formData.name}\n` +
-        `Company: ${formData.company || 'Not specified'}\n` +
-        `Email: ${formData.email}\n` +
-        `Phone: ${formData.phone || 'Not specified'}\n` +
-        `Service Interested In: ${formData.service}\n\n` +
-        `Project / Scope Details:\n${formData.details}\n\n` +
-        `Submitted via movegridsolutions.com`
+      `Name: ${formData.name}\n` +
+      `Company: ${formData.company || 'Not specified'}\n` +
+      `Email: ${formData.email}\n` +
+      `Phone: ${formData.phone || 'Not specified'}\n` +
+      `Service Interested In: ${formData.service}\n\n` +
+      `Project / Scope Details:\n${formData.details}\n\n` +
+      `Submitted via movegridsolutions.com`
     );
 
     window.location.href = `mailto:preetham@movegridsolutions.com?subject=${subject}&body=${body}`;
@@ -52,11 +90,12 @@ export function ContactForm() {
 
     const text = encodeURIComponent(
       `*New Project Inquiry — Movegrid Solutions*\n` +
-        `*Name:* ${formData.name}\n` +
-        `*Company:* ${formData.company || 'N/A'}\n` +
-        `*Service:* ${formData.service}\n` +
-        `*Email:* ${formData.email}\n` +
-        `*Details:* ${formData.details}`
+      `*Name:* ${formData.name}\n` +
+      `*Company:* ${formData.company || 'N/A'}\n` +
+      `*Service:* ${formData.service}\n` +
+      `*Email:* ${formData.email}\n` +
+      `*Phone:* ${formData.phone || 'N/A'}\n` +
+      `*Details:* ${formData.details}`
     );
 
     window.open(`https://wa.me/918296748983?text=${text}`, '_blank');
@@ -69,6 +108,48 @@ export function ContactForm() {
       className="space-y-4"
       onSubmit={handleEmailSend}
     >
+      {/* Quick Intent Chips */}
+      <div>
+        <label className="block text-[11px] font-semibold text-slate-400 uppercase tracking-wider mb-2">
+          Quick Preset:
+        </label>
+        <div className="flex flex-wrap gap-2">
+          <button
+            type="button"
+            onClick={() => selectPreset('fleet')}
+            className={`text-xs px-3 py-1.5 rounded-lg border transition-all inline-flex items-center gap-1.5 ${
+              formData.service.includes('Rider')
+                ? 'bg-cyan-500/15 border-cyan-400 text-cyan-300 font-semibold'
+                : 'bg-white/[0.03] border-white/10 text-slate-400 hover:text-white hover:border-white/20'
+            }`}
+          >
+            <Zap size={12} className="text-cyan-400" />
+            <span>⚡ Dark Store &amp; Rider Onboarding</span>
+          </button>
+          <button
+            type="button"
+            onClick={() => selectPreset('digital')}
+            className={`text-xs px-3 py-1.5 rounded-lg border transition-all ${
+              formData.service.includes('Web')
+                ? 'bg-blue-500/15 border-blue-400 text-blue-300 font-semibold'
+                : 'bg-white/[0.03] border-white/10 text-slate-400 hover:text-white hover:border-white/20'
+            }`}
+          >
+            <span>💻 Web Engineering</span>
+          </button>
+          <button
+            type="button"
+            onClick={() => selectPreset('creative')}
+            className={`text-xs px-3 py-1.5 rounded-lg border transition-all ${
+              formData.service.includes('Marketing')
+                ? 'bg-purple-500/15 border-purple-400 text-purple-300 font-semibold'
+                : 'bg-white/[0.03] border-white/10 text-slate-400 hover:text-white hover:border-white/20'
+            }`}
+          >
+            <span>📈 Growth Marketing</span>
+          </button>
+        </div>
+      </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <label className="block text-xs font-medium text-slate-300 mb-1.5">

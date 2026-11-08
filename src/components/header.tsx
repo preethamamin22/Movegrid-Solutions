@@ -8,7 +8,8 @@ import { Brand } from './brand';
 
 const navItems = [
   { label: 'Overview', href: '/' },
-  { label: 'Services & Divisions', href: '/services' },
+  { label: 'Rider Onboarding', href: '/services/rider-onboarding', badge: 'Dark Stores' },
+  { label: 'Services', href: '/services' },
   { label: 'Work', href: '/work' },
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },
@@ -49,9 +50,14 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`nav-link ${active ? 'active' : ''}`}
+                className={`nav-link inline-flex items-center gap-1.5 ${active ? 'active' : ''}`}
               >
-                {item.label}
+                <span>{item.label}</span>
+                {item.badge && (
+                  <span className="text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400 border border-emerald-500/30">
+                    {item.badge}
+                  </span>
+                )}
               </Link>
             );
           })}
@@ -99,13 +105,18 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className={`block text-lg font-medium p-3 rounded-lg transition-colors ${
+                className={`flex items-center justify-between text-base font-medium p-3 rounded-lg transition-colors ${
                   pathname === item.href
                     ? 'bg-white/10 text-white font-semibold'
                     : 'text-slate-400 hover:text-white'
                 }`}
               >
-                {item.label}
+                <span>{item.label}</span>
+                {item.badge && (
+                  <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400 border border-emerald-500/30">
+                    {item.badge}
+                  </span>
+                )}
               </Link>
             ))}
           </div>

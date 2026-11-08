@@ -86,9 +86,21 @@ export default async function ServicePage({
             <span className="text-cyan-gradient">Engineered for Velocity.</span>
           </h1>
 
-          <p className="text-base sm:text-lg text-slate-400 max-w-2xl leading-relaxed mb-8">
+          <p className="text-base sm:text-lg text-slate-400 max-w-2xl leading-relaxed mb-6">
             {s.description}
           </p>
+
+          {slug === 'rider-onboarding' && (
+            <div className="p-4 rounded-xl bg-cyan-950/40 border border-cyan-500/30 mb-8 max-w-2xl">
+              <div className="text-xs font-bold uppercase tracking-wider text-cyan-400 mb-1 flex items-center gap-1.5">
+                <Sparkles size={13} />
+                <span>Quick-Commerce &amp; Dark Store Logistics Ready</span>
+              </div>
+              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                Specialized mobilization for 10-minute grocery dark stores (Zepto, Blinkit, Instamart) and last-mile sortation hubs (Flipkart Minutes, Flipkart, Amazon). 24–48h SLA turnaround with 100% digital KYC &amp; BGV verification.
+              </p>
+            </div>
+          )}
 
           <div className="flex flex-wrap items-center gap-4">
             <Link href="/contact" className="btn-framer-primary !py-3 !px-6 text-sm">
