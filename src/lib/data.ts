@@ -125,13 +125,28 @@ export const services: Service[] = [
   },
 ];
 
-export const projects = [
+export type Project = {
+  title: string;
+  type: string;
+  tag: string;
+  number: string;
+  tone: string;
+  placeholder?: boolean;
+  metric?: string;
+  impact?: string;
+  stack?: string[];
+};
+
+export const projects: Project[] = [
   {
     title: 'Next-Gen Quick Commerce Web Platform',
     type: 'Web Development',
     tag: 'Digital Studio',
     number: '01',
     tone: 'blue',
+    metric: 'Sub-Second Search',
+    impact: 'High-performance quick-commerce web architecture with geo-fenced catalog discovery and instant checkout flows.',
+    stack: ['Next.js 15', 'TypeScript', 'Tailwind CSS', 'Edge APIs'],
     placeholder: true,
   },
   {
@@ -139,15 +154,21 @@ export const projects = [
     type: 'Fleet & Rider Operations',
     tag: 'Operations',
     number: '02',
-    tone: 'mint',
+    tone: 'cyan',
+    metric: '250+ Verified Riders',
+    impact: 'Turnkey 48-hour dark store fleet sourcing across 12 micro-fulfillment centers with 98% Day-1 shift attendance.',
+    stack: ['Aadhaar KYC', 'BGV Verification', 'EV Fleet Matching', 'Dark Store Ops'],
     placeholder: true,
   },
   {
-    title: 'Multi-Channel Brand Growth Campaign',
-    type: 'Creative Campaigns',
+    title: 'Enterprise Multi-Channel Brand Growth Campaign',
+    type: 'Performance Marketing',
     tag: 'Creative & Growth',
     number: '03',
-    tone: 'peach',
+    tone: 'purple',
+    metric: '4.6x ROAS Lift',
+    impact: 'Data-driven paid customer acquisition funnels, retargeting matrices, and creative content strategy.',
+    stack: ['Paid Acquisition', 'Meta Ads', 'Funnel Optimization', 'Lead Gen'],
     placeholder: true,
   },
   {
@@ -155,23 +176,32 @@ export const projects = [
     type: 'UI/UX Design',
     tag: 'Digital Studio',
     number: '04',
-    tone: 'lavender',
+    tone: 'blue',
+    metric: '80+ Reusable Tokens',
+    impact: 'Comprehensive multi-platform UI architecture, responsive design tokens, and developer-ready Figma libraries.',
+    stack: ['Figma Tokens', 'Micro-Interactions', 'iOS & Android Kits', 'Design System'],
     placeholder: true,
   },
   {
     title: 'Supplier Partner Sourcing & Verification Portal',
-    type: 'Operations',
+    type: 'Vendor Management',
     tag: 'Operations',
     number: '05',
-    tone: 'blue',
+    tone: 'cyan',
+    metric: '500+ Active Vendors',
+    impact: 'Streamlined merchant documentation workflows, KYC compliance audits, and partner catalog management.',
+    stack: ['Vendor Due Diligence', 'Compliance Audits', 'Partner SLAs', 'Merchant Ops'],
     placeholder: true,
   },
   {
     title: 'Cinematic Product Launch & Viral Reel Series',
-    type: 'Videography',
+    type: 'Videography & Editing',
     tag: 'Creative & Growth',
     number: '06',
-    tone: 'peach',
+    tone: 'purple',
+    metric: '3.2M Impressions',
+    impact: 'High-production brand launch films, executive founder interviews, and viral short-form social reels.',
+    stack: ['4K Corporate Video', 'Motion Design', 'Short-Form Reels', 'Color Grading'],
     placeholder: true,
   },
 ];

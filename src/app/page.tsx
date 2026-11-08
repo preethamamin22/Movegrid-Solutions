@@ -21,6 +21,7 @@ import { services } from '@/lib/data';
 import { ServiceCard } from '@/components/service-card';
 import { PortfolioGrid } from '@/components/portfolio-grid';
 import { ContactForm } from '@/components/contact-form';
+import { DarkStoreCalculator } from '@/components/dark-store-calculator';
 
 export default function Home() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
@@ -188,6 +189,11 @@ export default function Home() {
                 On-ground field coordinators ensure riders report to the designated dark store, complete order app training, and activate immediately.
               </p>
             </div>
+          </div>
+
+          {/* Interactive Dark Store Fleet Estimator */}
+          <div className="mb-10">
+            <DarkStoreCalculator />
           </div>
 
           {/* Quick SLA & RFP Banner */}
