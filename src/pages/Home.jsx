@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { ArrowRight, HeadphonesIcon, ShoppingCart, Code, CheckCircle, Users, Clock, TrendingUp, Zap, MessageSquare, Layout, Sparkles, Layers, Globe, ChevronDown, ChevronUp, Video, Bike } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 import founderPhoto from '../assets/founder.jpg';
 import divithPhoto from '../assets/divith.jpg';
 
@@ -13,6 +14,10 @@ export default function Home() {
 
   return (
     <div className="home-page">
+      <SEO 
+        title="Smart Support, Fleet Onboarding, Videography & Web Studio"
+        description="Movegrid Solutions powers business growth with smart 24/7 customer support, outbound telecalling, delivery rider onboarding, commercial videography, and custom web development."
+      />
       <div className="bg-glow" style={{ top: '-10%', left: '-10%' }}></div>
       <div className="bg-glow" style={{ top: '40%', right: '-10%', background: 'radial-gradient(circle at center, rgba(24, 24, 27, 0.015) 0%, transparent 70%)' }}></div>
       

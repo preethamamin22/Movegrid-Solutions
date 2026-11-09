@@ -1,5 +1,6 @@
 import { HeadphonesIcon, ShoppingCart, Code, ArrowRight, Video, Bike } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 import divithPhoto from '../assets/divith.jpg';
 
 export default function Services() {
@@ -57,6 +58,10 @@ export default function Services() {
 
   return (
     <div className="services-page" style={{ paddingTop: '120px', paddingBottom: '100px' }}>
+      <SEO 
+        title="Our Services - Web Studio, Videography, Rider Onboarding & BPO"
+        description="Explore Movegrid Solutions comprehensive services: custom React & Next.js web development, 4K commercial videography & editing, pan-India delivery fleet onboarding, and 24/7 customer support."
+      />
       <div className="container">
         <div className="section-header animate-fade-up">
           <h2>Our <span className="text-gradient">Services</span></h2>

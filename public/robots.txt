@@ -1,0 +1,9 @@
+# Robots.txt for Movegrid Solutions
+User-agent: *
+Allow: /
+
+# Disallow backend and private paths if any
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://movegridsolutions.com/sitemap.xml

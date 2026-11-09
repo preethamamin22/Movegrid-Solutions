@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
+import SEO from '../components/SEO';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -49,6 +50,10 @@ export default function Contact() {
 
   return (
     <div className="contact-page" style={{ paddingTop: '120px', paddingBottom: '100px' }}>
+      <SEO 
+        title="Contact Us - Free Consultation & Proposal"
+        description="Ready to scale your business operations? Contact Movegrid Solutions in Bengaluru, India. Call +91 8296748983 or email preetham@movegridsolutions.com."
+      />
       <div className="container">
         <div className="section-header animate-fade-up">
           <h2>Get in <span className="text-gradient">Touch</span></h2>

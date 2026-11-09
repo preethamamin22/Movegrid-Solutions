@@ -1,4 +1,5 @@
 import { ExternalLink } from 'lucide-react';
+import SEO from '../components/SEO';
 
 export default function Portfolio() {
   const projects = [
@@ -46,6 +47,10 @@ export default function Portfolio() {
 
   return (
     <div className="portfolio-page" style={{ paddingTop: '120px', paddingBottom: '100px' }}>
+      <SEO 
+        title="Portfolio - Live Client Case Studies & Projects"
+        description="Explore digital platforms, high-converting websites, and web apps engineered by Movegrid Solutions, including ZenNuc Deco, Shree Varaha, Ananya Homestays, and more."
+      />
       <div className="container">
         <div className="section-header animate-fade-up">
           <h2>Our <span className="text-gradient">Portfolio</span></h2>

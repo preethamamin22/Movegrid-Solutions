@@ -1,10 +1,15 @@
 import { Sparkles, Video, Award, Users, CheckCircle2 } from 'lucide-react';
+import SEO from '../components/SEO';
 import founderPhoto from '../assets/founder.jpg';
 import divithPhoto from '../assets/divith.jpg';
 
 export default function About() {
   return (
     <div className="about-page" style={{ paddingTop: '120px', paddingBottom: '100px' }}>
+      <SEO 
+        title="About Us - Mission, Vision & Leadership Team"
+        description="Learn about Movegrid Solutions, our vision, and leadership team including Preetham B R (Founder) and Divith B P (Videography & Editing)."
+      />
       <div className="container">
         <div className="section-header animate-fade-up">
           <h2>About <span className="text-gradient">Movegrid Solutions</span></h2>
