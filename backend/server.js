@@ -50,7 +50,7 @@ app.post('/api/contact', async (req, res) => {
 
     const mailOptions = {
       from: `"${firstName} ${lastName}" <${email}>`,
-      to: 'info@outvoxsolution.com',
+      to: 'preetham@movegridsolutions.com',
       subject: `New Lead: ${service || 'General Inquiry'} from ${firstName}`,
       text: `
       Name: ${firstName} ${lastName}
@@ -74,5 +74,5 @@ app.post('/api/contact', async (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Outvox Website Backend running on http://localhost:${PORT}`);
+  console.log(`Movegrid Solutions Website Backend running on http://localhost:${PORT}`);
 });

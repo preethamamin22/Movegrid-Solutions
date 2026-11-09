@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, PhoneCall } from 'lucide-react';
-import outvoxLogo from '../assets/outvox-logo.svg';
+import movegridLogo from '../assets/movegrid-logo.svg';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -44,7 +44,7 @@ export default function Navbar() {
         <div className="container nav-container">
           {/* Logo with actual image */}
           <Link to="/" className="nav-logo" onClick={closeMenu}>
-            <img src={outvoxLogo} alt="Outvox Solution" className="nav-logo-img" />
+            <img src={movegridLogo} alt="Movegrid Solutions" className="nav-logo-img" />
           </Link>
 
           {/* Desktop nav links */}
@@ -79,8 +79,11 @@ export default function Navbar() {
       {/* Mobile Drawer */}
       <div className={`mobile-drawer ${menuOpen ? 'open' : ''}`}>
         <div className="mobile-drawer-inner">
-          <div className="mobile-drawer-logo">
-            <img src={outvoxLogo} alt="Outvox Solution" style={{ height: '56px' }} />
+          <div className="mobile-drawer-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '8px 0 16px', borderBottom: '1px solid var(--glass-border)', marginBottom: '8px' }}>
+            <img src={movegridLogo} alt="Movegrid Solutions" style={{ maxHeight: '40px', width: 'auto', maxWidth: '75%' }} />
+            <button onClick={closeMenu} aria-label="Close menu" style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid var(--glass-border)', borderRadius: '8px', color: '#fff', cursor: 'pointer', padding: '6px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <X size={22} />
+            </button>
           </div>
           <nav className="mobile-nav-links">
             {links.map((link) => (

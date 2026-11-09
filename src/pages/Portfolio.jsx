@@ -52,15 +52,15 @@ export default function Portfolio() {
           <p>Real-world digital solutions we've built — explore live projects and success stories.</p>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '30px' }}>
+        <div className="portfolio-grid">
           {projects.map((project, idx) => (
             <div
               key={idx}
-              className={`glass-panel animate-fade-up delay-${(idx % 4) + 1}`}
+              className={`glass-panel portfolio-card animate-fade-up delay-${(idx % 4) + 1}`}
               style={{ overflow: 'hidden', display: 'flex', flexDirection: 'column' }}
             >
               {/* Project Image */}
-              <div style={{ height: '220px', overflow: 'hidden', position: 'relative' }}>
+              <div className="portfolio-img-wrap" style={{ height: '220px', overflow: 'hidden', position: 'relative' }}>
                 <img
                   src={project.image}
                   alt={project.title}

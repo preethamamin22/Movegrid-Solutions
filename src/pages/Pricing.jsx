@@ -37,9 +37,9 @@ export default function Pricing() {
           <p>Choose the right plan to scale your customer support and digital operations.</p>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '30px', alignItems: 'center' }}>
+        <div className="pricing-grid">
           {plans.map((plan, idx) => (
-            <div key={idx} className={`glass-panel animate-fade-up delay-${idx+1}`} style={{ padding: '40px 30px', position: 'relative', border: plan.highlight ? '1px solid var(--primary)' : '', boxShadow: plan.highlight ? '0 10px 30px rgba(153, 118, 207, 0.15)' : '' }}>
+            <div key={idx} className={`glass-panel pricing-card animate-fade-up delay-${idx+1}`} style={{ padding: '40px 30px', position: 'relative', border: plan.highlight ? '1px solid var(--primary)' : '', boxShadow: plan.highlight ? '0 10px 30px rgba(153, 118, 207, 0.15)' : '' }}>
               {plan.highlight && (
                 <div style={{ position: 'absolute', top: 0, left: '50%', transform: 'translate(-50%, -50%)', background: 'var(--primary)', color: 'var(--bg-color)', padding: '6px 16px', borderRadius: '20px', fontSize: '0.85rem', fontWeight: 'bold', letterSpacing: '1px', whiteSpace: 'nowrap' }}>
                   MOST POPULAR

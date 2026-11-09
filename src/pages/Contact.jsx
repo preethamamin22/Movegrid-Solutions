@@ -36,6 +36,17 @@ export default function Contact() {
       setLoading(false);
     }
   };
+
+  const handleEmailClick = (e) => {
+    const email = 'preetham@movegridsolutions.com';
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    if (!isMobile) {
+      e.preventDefault();
+      // On desktop browsers without a default mail client, directly open Gmail Web Compose
+      window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${email}`, '_blank', 'noopener,noreferrer');
+    }
+  };
+
   return (
     <div className="contact-page" style={{ paddingTop: '120px', paddingBottom: '100px' }}>
       <div className="container">
@@ -44,8 +55,8 @@ export default function Contact() {
           <p>Ready to transform your business? Let's discuss how we can help you scale.</p>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '60px', alignItems: 'flex-start' }}>
-          <div className="animate-fade-up delay-1">
+        <div className="contact-layout-grid">
+          <div className="animate-fade-up delay-1 contact-info-panel">
             <h3 style={{ fontSize: '2rem', marginBottom: '20px' }}>Contact Information</h3>
             <p style={{ marginBottom: '40px', fontSize: '1.1rem' }}>
               Fill out the form and our team will get back to you within 24 hours. We're excited to hear from you!
@@ -78,15 +89,20 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 style={{ fontSize: '1.2rem', marginBottom: '5px' }}>Email Address</h4>
-                  <a href="mailto:preetham@outvoxsolution.com" style={{ color: 'var(--text-muted)', wordBreak: 'break-all' }}>
-                    info@outvoxsolution.com
+                  <a 
+                    href="mailto:preetham@movegridsolutions.com" 
+                    onClick={handleEmailClick}
+                    title="Click to email preetham@movegridsolutions.com"
+                    style={{ color: 'var(--text-muted)', wordBreak: 'break-all' }}
+                  >
+                    info@movegridsolutions.com
                   </a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="glass-panel animate-fade-up delay-2" style={{ padding: '40px' }}>
+          <div className="glass-panel animate-fade-up delay-2 contact-form-panel" style={{ padding: '40px' }}>
             <h3 style={{ fontSize: '1.8rem', marginBottom: '30px' }}>Send us a Message</h3>
             {status.msg && (
               <div style={{ padding: '12px', marginBottom: '20px', borderRadius: '8px', background: status.type === 'success' ? 'rgba(37, 211, 102, 0.1)' : 'rgba(239, 68, 68, 0.1)', color: status.type === 'success' ? '#25D366' : '#ef4444', border: `1px solid ${status.type === 'success' ? 'rgba(37, 211, 102, 0.2)' : 'rgba(239, 68, 68, 0.2)'}`, display: 'flex', alignItems: 'center', gap: '8px' }}>
@@ -115,9 +131,11 @@ export default function Contact() {
                 <label style={{ display: 'block', marginBottom: '8px', fontSize: '0.9rem', color: 'var(--text-muted)' }}>Service Interested In</label>
                 <select value={formData.service} onChange={e => setFormData({...formData, service: e.target.value})} style={{ width: '100%', padding: '14px', background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '8px', color: '#ffffff', outline: 'none', appearance: 'none' }}>
                   <option value="" disabled style={{ color: '#ffffff', background: '#0a0616' }}>Select a service</option>
+                  <option value="web" style={{ color: '#ffffff', background: '#0a0616' }}>Web Design &amp; Development</option>
+                  <option value="videography" style={{ color: '#ffffff', background: '#0a0616' }}>Videography &amp; Editing</option>
+                  <option value="riders" style={{ color: '#ffffff', background: '#0a0616' }}>Riders Onboarding</option>
                   <option value="telecalling" style={{ color: '#ffffff', background: '#0a0616' }}>Telecalling</option>
                   <option value="ecommerce" style={{ color: '#ffffff', background: '#0a0616' }}>E-commerce Support</option>
-                  <option value="web" style={{ color: '#ffffff', background: '#0a0616' }}>Web Development</option>
                 </select>
               </div>
 

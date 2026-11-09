@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin } from 'lucide-react';
-import outvoxLogo from '../assets/outvox-logo.svg';
+import movegridLogo from '../assets/movegrid-logo.svg';
 
 /* ── Inline SVG brand icons (lucide-react doesn't ship brand logos) ── */
 const FacebookIcon = () => (
@@ -35,29 +35,39 @@ export default function Footer() {
   const socialLinks = [
     {
       icon: <FacebookIcon />,
-      href: 'https://www.facebook.com/outvoxsolution',
+      href: 'https://www.facebook.com/movegridsolutions',
       label: 'Facebook',
       color: '#1877F2',
     },
     {
       icon: <TwitterXIcon />,
-      href: 'https://twitter.com/outvoxsolution',
+      href: 'https://twitter.com/movegridsolutions',
       label: 'X (Twitter)',
       color: '#1DA1F2',
     },
     {
       icon: <InstagramIcon />,
-      href: 'https://www.instagram.com/outvo_xsolution?igsh=MTJva2ZuNmk4emxyNw==',
+      href: 'https://www.instagram.com/movegridsolutions',
       label: 'Instagram',
       color: '#E1306C',
     },
     {
       icon: <LinkedInIcon />,
-      href: 'https://www.linkedin.com/company/outvox-solution/',
+      href: 'https://www.linkedin.com/company/movegrid-solutions/',
       label: 'LinkedIn',
       color: '#0A66C2',
     },
   ];
+
+  const handleEmailClick = (e) => {
+    const email = 'preetham@movegridsolutions.com';
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    if (!isMobile) {
+      e.preventDefault();
+      // On desktop browsers without a default mail client, directly open Gmail Web Compose
+      window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${email}`, '_blank', 'noopener,noreferrer');
+    }
+  };
 
   return (
     <footer>
@@ -65,7 +75,7 @@ export default function Footer() {
         <div className="footer-grid">
           <div className="footer-col">
             <Link to="/" className="footer-logo-link" style={{ marginBottom: '20px', display: 'inline-block' }}>
-              <img src={outvoxLogo} alt="Outvox Solution" style={{ height: '64px', width: 'auto' }} />
+              <img src={movegridLogo} alt="Movegrid Solutions" style={{ height: '64px', width: 'auto' }} />
             </Link>
             <p style={{ marginBottom: '24px' }}>
               Professional telecalling, customer support, and web solutions designed to help your business grow faster.
@@ -103,11 +113,11 @@ export default function Footer() {
           <div className="footer-col">
             <h3>Our Services</h3>
             <ul className="footer-links">
+              <li><Link to="/services">Web Design &amp; Dev</Link></li>
+              <li><Link to="/services">Videography &amp; Editing</Link></li>
+              <li><Link to="/services">Riders Onboarding</Link></li>
               <li><Link to="/services">Telecalling Services</Link></li>
               <li><Link to="/services">E-commerce Support</Link></li>
-              <li><Link to="/services">Web Design &amp; Dev</Link></li>
-              <li><Link to="/services">Lead Generation</Link></li>
-              <li><Link to="/services">24/7 Customer Care</Link></li>
             </ul>
           </div>
 
@@ -124,8 +134,13 @@ export default function Footer() {
               </li>
               <li style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
                 <Mail size={20} style={{ color: 'var(--primary)', flexShrink: 0 }} />
-                <a href="mailto:preetham@outvoxsolution.com" style={{ color: 'var(--text-muted)', wordBreak: 'break-all' }}>
-                  info@outvoxsolution.com
+                <a 
+                  href="mailto:preetham@movegridsolutions.com" 
+                  onClick={handleEmailClick}
+                  title="Click to email preetham@movegridsolutions.com"
+                  style={{ color: 'var(--text-muted)', wordBreak: 'break-all' }}
+                >
+                  info@movegridsolutions.com
                 </a>
               </li>
             </ul>
@@ -133,7 +148,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} Outvox Solution. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Movegrid Solutions. All rights reserved.</p>
         </div>
       </div>
     </footer>

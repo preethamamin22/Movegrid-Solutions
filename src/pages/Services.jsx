@@ -1,5 +1,6 @@
-import { HeadphonesIcon, ShoppingCart, Code, ArrowRight } from 'lucide-react';
+import { HeadphonesIcon, ShoppingCart, Code, ArrowRight, Video, Bike } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import divithPhoto from '../assets/divith.jpg';
 
 export default function Services() {
   const services = [
@@ -11,7 +12,28 @@ export default function Services() {
       desc: "We build modern, ultra-fast, and high-converting websites & web applications. From custom React & Next.js platforms to Shopify e-commerce storefronts, our web solutions are engineered for growth.",
       tags: ["React.js & Next.js Apps", "Shopify Stores", "Framer Micro-Animations", "SEO & Performance Optimization"],
       color: "var(--primary)",
-      bg: "rgba(153, 118, 207, 0.15)"
+      bg: "rgba(168, 85, 247, 0.15)"
+    },
+    {
+      icon: <Video size={40} />,
+      title: "Videography & Editing",
+      featured: false,
+      badge: "✦ CREATIVE MEDIA STUDIO",
+      lead: "Divith B P (Creative Lead)",
+      leadPhoto: divithPhoto,
+      desc: "Turn your brand vision into captivating visual stories. Led by Divith B P, we produce cinematic commercial shoots, high-converting social media reels, product showcases, corporate event coverage, and YouTube content with professional color grading, sound design, and dynamic video editing.",
+      tags: ["4K Cinematic Shoots", "Social Media Reels & Shorts", "Corporate Video Production", "Motion Graphics & VFX", "Color Grading & Audio Mastering"],
+      color: "var(--primary)",
+      bg: "rgba(168, 85, 247, 0.12)"
+    },
+    {
+      icon: <Bike size={40} />,
+      title: "Riders Onboarding",
+      featured: false,
+      desc: "Comprehensive delivery partner recruitment, KYC document verification, background checks, and fleet training for quick-commerce, food delivery, and hyperlocal logistics companies. We help you scale rider fleets rapidly and compliantly.",
+      tags: ["Fleet Sourcing & Acquisition", "KYC & Document Verification", "Rider Induction & Training", "Pan-India Fleet Scaling", "Compliance & SLA Tracking"],
+      color: "var(--primary)",
+      bg: "rgba(124, 58, 237, 0.12)"
     },
     {
       icon: <HeadphonesIcon size={40} />,
@@ -41,34 +63,36 @@ export default function Services() {
           <p>Comprehensive solutions designed to elevate your business operations and digital presence.</p>
         </div>
 
-        <div style={{ display: 'grid', gap: '30px' }}>
+        <div className="services-list-grid">
           {services.map((service, idx) => (
             <div 
               key={idx} 
-              className={`glass-panel animate-fade-up delay-${idx+1}`} 
+              className={`glass-panel service-card animate-fade-up delay-${idx+1}`} 
               style={{ 
-                display: 'flex', 
-                flexWrap: 'wrap', 
-                gap: '30px', 
-                padding: '40px', 
-                alignItems: 'center',
-                position: 'relative',
                 border: service.featured ? '1px solid var(--primary)' : '1px solid var(--glass-border)',
                 background: service.featured ? 'linear-gradient(135deg, rgba(153, 118, 207, 0.08) 0%, rgba(34, 15, 61, 0.4) 100%)' : 'var(--glass-bg)',
                 boxShadow: service.featured ? '0 12px 40px rgba(153, 118, 207, 0.18)' : '0 10px 30px rgba(0, 0, 0, 0.3)'
               }}
             >
               {service.featured && (
-                <div style={{ position: 'absolute', top: '-14px', left: '40px', background: 'var(--primary)', color: '#03000a', padding: '4px 14px', borderRadius: '20px', fontSize: '0.75rem', fontWeight: '800', letterSpacing: '1px', textTransform: 'uppercase' }}>
+                <div className="service-featured-badge" style={{ position: 'absolute', top: '-14px', left: '40px', background: 'var(--primary)', color: '#ffffff', padding: '4px 14px', borderRadius: '20px', fontSize: '0.75rem', fontWeight: '800', letterSpacing: '1px', textTransform: 'uppercase' }}>
                   {service.badge}
                 </div>
               )}
-              <div style={{ width: '90px', height: '90px', borderRadius: '24px', background: service.bg, color: service.color, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, border: '1px solid rgba(153, 118, 207, 0.2)' }}>
+              <div className="service-icon-box" style={{ width: '84px', height: '84px', borderRadius: '22px', background: service.bg, color: service.color, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, border: '1px solid rgba(153, 118, 207, 0.2)' }}>
                 {service.icon}
               </div>
-              <div style={{ flex: '1 1 260px' }}>
-                <h3 style={{ fontSize: '1.8rem', marginBottom: '12px' }}>{service.title}</h3>
-                <p style={{ fontSize: '1.05rem', marginBottom: '20px', color: 'var(--text-muted)' }}>{service.desc}</p>
+              <div className="service-content-box" style={{ flex: '1 1 260px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '14px', flexWrap: 'wrap', marginBottom: '8px' }}>
+                  <h3 className="service-title" style={{ fontSize: '1.75rem', margin: 0 }}>{service.title}</h3>
+                  {service.lead && (
+                    <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: 'rgba(168, 85, 247, 0.12)', border: '1px solid rgba(168, 85, 247, 0.35)', padding: '3px 12px', borderRadius: '20px' }}>
+                      {service.leadPhoto && <img src={service.leadPhoto} alt={service.lead} style={{ width: '22px', height: '22px', borderRadius: '50%', objectFit: 'cover' }} />}
+                      <span style={{ fontSize: '0.8rem', color: '#ffffff', fontWeight: '500' }}>{service.lead}</span>
+                    </div>
+                  )}
+                </div>
+                <p style={{ fontSize: '1.02rem', marginBottom: '20px', color: 'var(--text-muted)' }}>{service.desc}</p>
                 {service.tags && (
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '24px' }}>
                     {service.tags.map((tag, tIdx) => (
