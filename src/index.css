@@ -58,7 +58,6 @@ body {
 .about-page,
 .services-page,
 .portfolio-page,
-.pricing-page,
 .contact-page {
   position: relative;
   overflow: hidden;
@@ -584,7 +583,6 @@ input, select, textarea {
 .about-page,
 .services-page,
 .portfolio-page,
-.pricing-page,
 .contact-page {
   padding-top: 120px;
   padding-bottom: 90px;
@@ -706,13 +704,6 @@ input, select, textarea {
   gap: 30px;
 }
 
-.pricing-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  align-items: center;
-}
-
 .contact-layout-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -773,7 +764,6 @@ input, select, textarea {
   .about-page,
   .services-page,
   .portfolio-page,
-  .pricing-page,
   .contact-page {
     padding-top: 92px !important;
     padding-bottom: 60px !important;
@@ -887,17 +877,6 @@ input, select, textarea {
     padding: 30px 20px;
   }
 
-  /* Pricing Grid */
-  .pricing-grid {
-    grid-template-columns: 1fr;
-    max-width: 440px;
-    margin: 0 auto;
-    gap: 24px;
-  }
-  .pricing-card {
-    padding: 32px 22px !important;
-  }
-
   /* Portfolio Grid */
   .portfolio-grid {
     grid-template-columns: 1fr;
@@ -970,7 +949,6 @@ input, select, textarea {
   .about-page,
   .services-page,
   .portfolio-page,
-  .pricing-page,
   .contact-page {
     padding-top: 84px !important;
     padding-bottom: 48px !important;
@@ -1092,7 +1070,6 @@ input, select, textarea {
   }
 
   .service-card,
-  .pricing-card,
   .contact-form-panel,
   .team-card {
     padding: 20px 12px !important;
