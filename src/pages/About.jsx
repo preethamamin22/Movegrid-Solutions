@@ -7,8 +7,9 @@ export default function About() {
   return (
     <div className="about-page" style={{ paddingTop: '120px', paddingBottom: '100px' }}>
       <SEO 
-        title="About Us - Mission, Vision & Leadership Team"
-        description="Learn about Movegrid Solutions, our vision, and leadership team including Preetham B R (Founder) and Divith B P (Videography & Editing)."
+        title="About Us | Preetham B R - Founder of Movegrid Solutions"
+        description="Preetham B R is the Founder of Movegrid Solutions. Learn about our leadership, mission, and how we empower businesses with smart BPO, rider onboarding, videography, and web development."
+        keywords="Preetham B R, founder of Movegrid Solutions, Preetham B R founder, Movegrid Solutions founder, who founded Movegrid Solutions, Divith B P, Movegrid leadership"
       />
       <div className="container">
         <div className="section-header animate-fade-up">
@@ -45,17 +46,22 @@ export default function About() {
 
           <div className="team-grid" style={{ marginTop: '40px' }}>
             {/* Preetham B R - Founder */}
-            <div className="glass-panel team-card animate-fade-up delay-1" style={{ position: 'relative', border: '1px solid rgba(168, 85, 247, 0.35)', background: 'linear-gradient(135deg, rgba(168, 85, 247, 0.08) 0%, rgba(30, 13, 54, 0.45) 100%)', boxShadow: '0 12px 35px rgba(168, 85, 247, 0.18)', borderRadius: '20px' }}>
+            <div 
+              className="glass-panel team-card animate-fade-up delay-1" 
+              itemScope 
+              itemType="https://schema.org/Person"
+              style={{ position: 'relative', border: '1px solid rgba(168, 85, 247, 0.35)', background: 'linear-gradient(135deg, rgba(168, 85, 247, 0.08) 0%, rgba(30, 13, 54, 0.45) 100%)', boxShadow: '0 12px 35px rgba(168, 85, 247, 0.18)', borderRadius: '20px' }}
+            >
               <div style={{ position: 'absolute', top: '-13px', left: '50%', transform: 'translateX(-50%)', background: 'linear-gradient(135deg, #a855f7 0%, #7c3aed 100%)', color: '#ffffff', padding: '4px 16px', borderRadius: '20px', fontSize: '0.72rem', fontWeight: '800', letterSpacing: '1px', textTransform: 'uppercase', boxShadow: '0 4px 14px rgba(168, 85, 247, 0.4)' }}>
                 ✦ FOUNDER
               </div>
               <div style={{ width: '150px', height: '190px', margin: '14px auto 20px', borderRadius: '16px', overflow: 'hidden', border: '2px solid rgba(168, 85, 247, 0.45)', boxShadow: '0 8px 28px rgba(168, 85, 247, 0.28)', background: '#0a0414' }}>
-                <img src={founderPhoto} alt="Preetham B R - Founder" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 15%', display: 'block' }} />
+                <img itemProp="image" src={founderPhoto} alt="Preetham B R - Founder of Movegrid Solutions" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 15%', display: 'block' }} />
               </div>
-              <h3 style={{ fontSize: '1.5rem', marginBottom: '4px', color: '#ffffff' }}>Preetham B R</h3>
-              <p style={{ color: 'var(--primary)', fontWeight: '600', fontSize: '0.95rem', marginBottom: '14px' }}>Founder</p>
-              <p style={{ fontSize: '0.95rem', color: 'var(--text-muted)', lineHeight: '1.6', marginBottom: '20px' }}>
-                Guiding overall business vision, strategic partnerships, operational scale, and client success across all BPO, fleet onboarding, and web development verticals.
+              <h3 itemProp="name" style={{ fontSize: '1.5rem', marginBottom: '4px', color: '#ffffff' }}>Preetham B R</h3>
+              <p itemProp="jobTitle" style={{ color: 'var(--primary)', fontWeight: '600', fontSize: '0.95rem', marginBottom: '14px' }}>Founder</p>
+              <p itemProp="description" style={{ fontSize: '0.95rem', color: 'var(--text-muted)', lineHeight: '1.6', marginBottom: '20px' }}>
+                Preetham B R is the Founder of Movegrid Solutions, driving overall business vision, strategic partnerships, operational scale, and client success across all BPO, fleet onboarding, and web development verticals.
               </p>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', justifyContent: 'center' }}>
                 <span style={{ fontSize: '0.78rem', background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)', padding: '4px 12px', borderRadius: '16px', color: '#ffffff' }}>Strategy</span>

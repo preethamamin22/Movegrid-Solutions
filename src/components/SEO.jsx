@@ -62,3 +62,4 @@ export default function SEO({ title, description, canonical, keywords }) {
 
   return null;
 }
+

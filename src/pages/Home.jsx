@@ -15,8 +15,9 @@ export default function Home() {
   return (
     <div className="home-page">
       <SEO 
-        title="Smart Support, Fleet Onboarding, Videography & Web Studio"
-        description="Movegrid Solutions powers business growth with smart 24/7 customer support, outbound telecalling, delivery rider onboarding, commercial videography, and custom web development."
+        title="Movegrid Solutions | Founded by Preetham B R | BPO, Fleet & Web Studio"
+        description="Movegrid Solutions, founded by Preetham B R, powers business growth with smart 24/7 customer support, outbound telecalling, delivery rider onboarding, commercial videography, and custom web development."
+        keywords="Movegrid Solutions, Preetham B R, founder of Movegrid Solutions, Preetham B R founder, Movegrid Solutions founder, who is the founder of Movegrid Solutions, BPO services, telecalling, riders onboarding, videography, web design, Bengaluru agency"
       />
       <div className="bg-glow" style={{ top: '-10%', left: '-10%' }}></div>
       <div className="bg-glow" style={{ top: '40%', right: '-10%', background: 'radial-gradient(circle at center, rgba(24, 24, 27, 0.015) 0%, transparent 70%)' }}></div>
@@ -474,6 +475,7 @@ export default function Home() {
           </div>
           <div style={{ maxWidth: '820px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '16px' }}>
             {[
+              { q: 'Who is the founder of Movegrid Solutions?', a: 'Preetham B R is the Founder of Movegrid Solutions. Under his leadership, Movegrid Solutions delivers end-to-end BPO telecalling, delivery fleet onboarding, creative videography & editing, and modern web design and development.' },
               { q: 'What web development technologies do you specialize in?', a: 'We specialize in modern React.js, Next.js, Vite, Shopify, and custom CSS/Tailwind layouts engineered for fast performance, high Lighthouse scores, and sleek dark-mode aesthetics.' },
               { q: 'How fast can you design and deploy a custom website?', a: 'Most custom landing pages and business websites are completed within 1 to 2 weeks, fully optimized for mobile devices and search engines.' },
               { q: 'What customer support and telecalling services do you offer?', a: 'We offer 24/7 B2B & B2C outbound lead generation, appointment booking, e-commerce customer support (chat, email, phone), and dispute management.' },
@@ -516,17 +518,22 @@ export default function Home() {
 
           <div className="team-grid">
             {/* Preetham B R */}
-            <div className="glass-panel team-card animate-fade-up delay-1" style={{ position: 'relative', border: '1px solid rgba(168, 85, 247, 0.35)', background: 'linear-gradient(135deg, rgba(168, 85, 247, 0.08) 0%, rgba(30, 13, 54, 0.45) 100%)', boxShadow: '0 12px 35px rgba(168, 85, 247, 0.18)', borderRadius: '20px' }}>
+            <div 
+              className="glass-panel team-card animate-fade-up delay-1" 
+              itemScope 
+              itemType="https://schema.org/Person"
+              style={{ position: 'relative', border: '1px solid rgba(168, 85, 247, 0.35)', background: 'linear-gradient(135deg, rgba(168, 85, 247, 0.08) 0%, rgba(30, 13, 54, 0.45) 100%)', boxShadow: '0 12px 35px rgba(168, 85, 247, 0.18)', borderRadius: '20px' }}
+            >
               <div style={{ position: 'absolute', top: '-13px', left: '50%', transform: 'translateX(-50%)', background: 'linear-gradient(135deg, #a855f7 0%, #7c3aed 100%)', color: '#ffffff', padding: '4px 16px', borderRadius: '20px', fontSize: '0.72rem', fontWeight: '800', letterSpacing: '1px', textTransform: 'uppercase', boxShadow: '0 4px 14px rgba(168, 85, 247, 0.4)' }}>
                 ✦ FOUNDER
               </div>
               <div style={{ width: '150px', height: '190px', margin: '14px auto 20px', borderRadius: '16px', overflow: 'hidden', border: '2px solid rgba(168, 85, 247, 0.45)', boxShadow: '0 8px 28px rgba(168, 85, 247, 0.28)', background: '#0a0414' }}>
-                <img src={founderPhoto} alt="Preetham B R - Founder" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 15%', display: 'block' }} />
+                <img itemProp="image" src={founderPhoto} alt="Preetham B R - Founder of Movegrid Solutions" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 15%', display: 'block' }} />
               </div>
-              <h3 style={{ fontSize: '1.5rem', marginBottom: '4px', color: '#ffffff' }}>Preetham B R</h3>
-              <p style={{ color: 'var(--primary)', fontWeight: '600', fontSize: '0.92rem', marginBottom: '14px' }}>Founder</p>
-              <p style={{ fontSize: '0.92rem', color: 'var(--text-muted)', lineHeight: '1.6' }}>
-                Driving company vision, strategic partnerships, and operational execution across BPO, web development, fleet onboarding, and client solutions.
+              <h3 itemProp="name" style={{ fontSize: '1.5rem', marginBottom: '4px', color: '#ffffff' }}>Preetham B R</h3>
+              <p itemProp="jobTitle" style={{ color: 'var(--primary)', fontWeight: '600', fontSize: '0.92rem', marginBottom: '14px' }}>Founder</p>
+              <p itemProp="description" style={{ fontSize: '0.92rem', color: 'var(--text-muted)', lineHeight: '1.6' }}>
+                Preetham B R is the Founder of Movegrid Solutions, driving company vision, strategic partnerships, and operational execution across BPO, web development, fleet onboarding, and client solutions.
               </p>
             </div>
 

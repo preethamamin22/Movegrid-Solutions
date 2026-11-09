@@ -77,8 +77,8 @@ export default function Footer() {
             <Link to="/" className="footer-logo-link" style={{ marginBottom: '20px', display: 'inline-block' }}>
               <img src={movegridLogo} alt="Movegrid Solutions" style={{ height: '64px', width: 'auto' }} />
             </Link>
-            <p style={{ marginBottom: '24px' }}>
-              Professional telecalling, customer support, and web solutions designed to help your business grow faster.
+            <p style={{ marginBottom: '24px', lineHeight: '1.6' }}>
+              Professional BPO, delivery fleet onboarding, creative media, and custom web solutions. Founded by <strong style={{ color: '#ffffff', fontWeight: '600' }}>Preetham B R</strong> to power rapid business growth.
             </p>
             {/* Social Icons */}
             <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
@@ -139,7 +139,7 @@ export default function Footer() {
                   title="Click to email preetham@movegridsolutions.com"
                   style={{ color: 'var(--text-muted)', wordBreak: 'break-all' }}
                 >
-                  info@movegridsolutions.com
+                  preetham@movegridsolutions.com
                 </a>
               </li>
             </ul>

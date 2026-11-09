@@ -28,6 +28,10 @@
     <lastmod>2026-11-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://movegridsolutions.com/founder.jpg</image:loc>
+      <image:title>Preetham B R - Founder of Movegrid Solutions</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://movegridsolutions.com/contact</loc>
@@ -36,3 +40,4 @@
     <priority>0.8</priority>
   </url>
 </urlset>
+

@@ -100,7 +100,7 @@ export default function Contact() {
                     title="Click to email preetham@movegridsolutions.com"
                     style={{ color: 'var(--text-muted)', wordBreak: 'break-all' }}
                   >
-                    info@movegridsolutions.com
+                    preetham@movegridsolutions.com
                   </a>
                 </div>
               </div>
