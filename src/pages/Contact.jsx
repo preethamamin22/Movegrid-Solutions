@@ -89,18 +89,23 @@ export default function Contact() {
               </div>
 
               <div style={{ display: 'flex', alignItems: 'flex-start', gap: '20px' }}>
-                <div style={{ width: '50px', height: '50px', background: 'var(--bg-lighter)', color: 'var(--primary)', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                  <Mail size={24} />
+                <div style={{ width: '50px', height: '50px', background: 'rgba(10, 102, 194, 0.15)', color: '#0A66C2', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, border: '1px solid rgba(10, 102, 194, 0.3)' }}>
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                    <rect x="2" y="9" width="4" height="12"/>
+                    <circle cx="4" cy="4" r="2"/>
+                  </svg>
                 </div>
                 <div>
-                  <h4 style={{ fontSize: '1.2rem', marginBottom: '5px' }}>Email Address</h4>
+                  <h4 style={{ fontSize: '1.2rem', marginBottom: '5px' }}>LinkedIn</h4>
                   <a 
-                    href="mailto:preetham@movegridsolutions.com" 
-                    onClick={handleEmailClick}
-                    title="Click to email preetham@movegridsolutions.com"
-                    style={{ color: 'var(--text-muted)', wordBreak: 'break-all' }}
+                    href="https://www.linkedin.com/company/movegrid-solutions/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    title="Movegrid Solutions on LinkedIn"
+                    style={{ color: '#0A66C2', fontWeight: '500', wordBreak: 'break-all' }}
                   >
-                    preetham@movegridsolutions.com
+                    Movegrid Solutions on LinkedIn
                   </a>
                 </div>
               </div>

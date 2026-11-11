@@ -142,6 +142,20 @@ export default function Footer() {
                   preetham@movegridsolutions.com
                 </a>
               </li>
+              <li style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
+                <span style={{ color: '#0A66C2', display: 'flex', alignItems: 'center', flexShrink: 0 }}>
+                  <LinkedInIcon />
+                </span>
+                <a 
+                  href="https://www.linkedin.com/company/movegrid-solutions/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  title="Movegrid Solutions on LinkedIn"
+                  style={{ color: 'var(--text-muted)' }}
+                >
+                  LinkedIn
+                </a>
+              </li>
             </ul>
           </div>
         </div>

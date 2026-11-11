@@ -2,6 +2,7 @@ import { Sparkles, Video, Award, Users, CheckCircle2 } from 'lucide-react';
 import SEO from '../components/SEO';
 import founderPhoto from '../assets/founder.jpg';
 import divithPhoto from '../assets/divith.jpg';
+import kavyaPhoto from '../assets/kavya.jpg';
 
 export default function About() {
   return (
@@ -9,7 +10,7 @@ export default function About() {
       <SEO 
         title="About Us | Preetham B R - Founder of Movegrid Solutions"
         description="Preetham B R is the Founder of Movegrid Solutions. Learn about our leadership, mission, and how we empower businesses with smart BPO, rider onboarding, videography, and web development."
-        keywords="Preetham B R, founder of Movegrid Solutions, Preetham B R founder, Movegrid Solutions founder, who founded Movegrid Solutions, Divith B P, Movegrid leadership"
+        keywords="Preetham B R, founder of Movegrid Solutions, Preetham B R founder, Movegrid Solutions founder, who founded Movegrid Solutions, Divith B P, Kavya, Movegrid leadership, Movegrid team"
       />
       <div className="container">
         <div className="section-header animate-fade-up">
@@ -68,6 +69,33 @@ export default function About() {
                 <span style={{ fontSize: '0.78rem', background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)', padding: '4px 12px', borderRadius: '16px', color: '#ffffff' }}>Operations</span>
                 <span style={{ fontSize: '0.78rem', background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)', padding: '4px 12px', borderRadius: '16px', color: '#ffffff' }}>Client Growth</span>
               </div>
+              <div style={{ marginTop: '16px', textAlign: 'center' }}>
+                <a
+                  href="https://www.linkedin.com/company/movegrid-solutions/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '8px',
+                    fontSize: '0.82rem',
+                    color: '#ffffff',
+                    background: 'rgba(10, 102, 194, 0.2)',
+                    border: '1px solid rgba(10, 102, 194, 0.45)',
+                    padding: '6px 14px',
+                    borderRadius: '20px',
+                    fontWeight: '600',
+                    textDecoration: 'none'
+                  }}
+                >
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="#0A66C2" aria-hidden="true">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                    <rect x="2" y="9" width="4" height="12"/>
+                    <circle cx="4" cy="4" r="2"/>
+                  </svg>
+                  <span>Movegrid on LinkedIn</span>
+                </a>
+              </div>
             </div>
 
             {/* Divith B P - Videography and Editing */}
@@ -87,6 +115,26 @@ export default function About() {
                 <span style={{ fontSize: '0.78rem', background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)', padding: '4px 12px', borderRadius: '16px', color: '#ffffff' }}>Cinematography</span>
                 <span style={{ fontSize: '0.78rem', background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)', padding: '4px 12px', borderRadius: '16px', color: '#ffffff' }}>Reel Editing</span>
                 <span style={{ fontSize: '0.78rem', background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)', padding: '4px 12px', borderRadius: '16px', color: '#ffffff' }}>Color Grading</span>
+              </div>
+            </div>
+
+            {/* Kavya - Accounts */}
+            <div className="glass-panel team-card animate-fade-up delay-3" style={{ position: 'relative', border: '1px solid rgba(168, 85, 247, 0.25)', background: 'linear-gradient(135deg, rgba(147, 51, 234, 0.06) 0%, rgba(30, 13, 54, 0.45) 100%)', boxShadow: '0 12px 35px rgba(147, 51, 234, 0.15)', borderRadius: '20px' }}>
+              <div style={{ position: 'absolute', top: '-13px', left: '50%', transform: 'translateX(-50%)', background: 'linear-gradient(135deg, #a855f7 0%, #7c3aed 100%)', color: '#ffffff', padding: '4px 16px', borderRadius: '20px', fontSize: '0.72rem', fontWeight: '800', letterSpacing: '1px', textTransform: 'uppercase', boxShadow: '0 4px 14px rgba(168, 85, 247, 0.4)' }}>
+                ✦ ACCOUNTS
+              </div>
+              <div style={{ width: '150px', height: '190px', margin: '14px auto 20px', borderRadius: '16px', overflow: 'hidden', border: '2px solid rgba(168, 85, 247, 0.45)', boxShadow: '0 8px 28px rgba(168, 85, 247, 0.28)', background: '#0a0414' }}>
+                <img src={kavyaPhoto} alt="Kavya - Accounts at Movegrid Solutions" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 15%', display: 'block' }} />
+              </div>
+              <h3 style={{ fontSize: '1.5rem', marginBottom: '4px', color: '#ffffff' }}>Kavya</h3>
+              <p style={{ color: 'var(--primary)', fontWeight: '600', fontSize: '0.95rem', marginBottom: '14px' }}>Accounts</p>
+              <p style={{ fontSize: '0.95rem', color: 'var(--text-muted)', lineHeight: '1.6', marginBottom: '20px' }}>
+                Overseeing financial records, client billing, invoicing, budgeting, accounts payable and receivable to ensure seamless financial operations and compliance.
+              </p>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', justifyContent: 'center' }}>
+                <span style={{ fontSize: '0.78rem', background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)', padding: '4px 12px', borderRadius: '16px', color: '#ffffff' }}>Financial Mgmt</span>
+                <span style={{ fontSize: '0.78rem', background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)', padding: '4px 12px', borderRadius: '16px', color: '#ffffff' }}>Invoicing</span>
+                <span style={{ fontSize: '0.78rem', background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)', padding: '4px 12px', borderRadius: '16px', color: '#ffffff' }}>Bookkeeping</span>
               </div>
             </div>
           </div>

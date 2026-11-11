@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import founderPhoto from '../assets/founder.jpg';
 import divithPhoto from '../assets/divith.jpg';
+import kavyaPhoto from '../assets/kavya.jpg';
 
 export default function Home() {
   const [openFaq, setOpenFaq] = useState(null);
@@ -17,7 +18,7 @@ export default function Home() {
       <SEO 
         title="Movegrid Solutions | Founded by Preetham B R | BPO, Fleet & Web Studio"
         description="Movegrid Solutions, founded by Preetham B R, powers business growth with smart 24/7 customer support, outbound telecalling, delivery rider onboarding, commercial videography, and custom web development."
-        keywords="Movegrid Solutions, Preetham B R, founder of Movegrid Solutions, Preetham B R founder, Movegrid Solutions founder, who is the founder of Movegrid Solutions, BPO services, telecalling, riders onboarding, videography, web design, Bengaluru agency"
+        keywords="Movegrid Solutions, Preetham B R, founder of Movegrid Solutions, Preetham B R founder, Movegrid Solutions founder, who is the founder of Movegrid Solutions, Divith B P, Kavya, BPO services, telecalling, riders onboarding, videography, web design, Bengaluru agency"
       />
       <div className="bg-glow" style={{ top: '-10%', left: '-10%' }}></div>
       <div className="bg-glow" style={{ top: '40%', right: '-10%', background: 'radial-gradient(circle at center, rgba(24, 24, 27, 0.015) 0%, transparent 70%)' }}></div>
@@ -532,9 +533,36 @@ export default function Home() {
               </div>
               <h3 itemProp="name" style={{ fontSize: '1.5rem', marginBottom: '4px', color: '#ffffff' }}>Preetham B R</h3>
               <p itemProp="jobTitle" style={{ color: 'var(--primary)', fontWeight: '600', fontSize: '0.92rem', marginBottom: '14px' }}>Founder</p>
-              <p itemProp="description" style={{ fontSize: '0.92rem', color: 'var(--text-muted)', lineHeight: '1.6' }}>
+              <p itemProp="description" style={{ fontSize: '0.92rem', color: 'var(--text-muted)', lineHeight: '1.6', marginBottom: '16px' }}>
                 Preetham B R is the Founder of Movegrid Solutions, driving company vision, strategic partnerships, and operational execution across BPO, web development, fleet onboarding, and client solutions.
               </p>
+              <div style={{ textAlign: 'center' }}>
+                <a
+                  href="https://www.linkedin.com/company/movegrid-solutions/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '8px',
+                    fontSize: '0.82rem',
+                    color: '#ffffff',
+                    background: 'rgba(10, 102, 194, 0.2)',
+                    border: '1px solid rgba(10, 102, 194, 0.45)',
+                    padding: '6px 14px',
+                    borderRadius: '20px',
+                    fontWeight: '600',
+                    textDecoration: 'none'
+                  }}
+                >
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="#0A66C2" aria-hidden="true">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                    <rect x="2" y="9" width="4" height="12"/>
+                    <circle cx="4" cy="4" r="2"/>
+                  </svg>
+                  <span>Movegrid on LinkedIn</span>
+                </a>
+              </div>
             </div>
 
             {/* Divith B P */}
@@ -549,6 +577,21 @@ export default function Home() {
               <p style={{ color: 'var(--primary)', fontWeight: '600', fontSize: '0.92rem', marginBottom: '14px' }}>Videography &amp; Editing</p>
               <p style={{ fontSize: '0.92rem', color: 'var(--text-muted)', lineHeight: '1.6' }}>
                 Leading cinematic video shoots, social media reels, motion graphics, and high-retention video editing that elevates brand storytelling.
+              </p>
+            </div>
+
+            {/* Kavya - Accounts */}
+            <div className="glass-panel team-card animate-fade-up delay-3" style={{ position: 'relative', border: '1px solid rgba(168, 85, 247, 0.25)', background: 'linear-gradient(135deg, rgba(147, 51, 234, 0.06) 0%, rgba(30, 13, 54, 0.45) 100%)', boxShadow: '0 12px 35px rgba(147, 51, 234, 0.15)', borderRadius: '20px' }}>
+              <div style={{ position: 'absolute', top: '-13px', left: '50%', transform: 'translateX(-50%)', background: 'linear-gradient(135deg, #a855f7 0%, #7c3aed 100%)', color: '#ffffff', padding: '4px 16px', borderRadius: '20px', fontSize: '0.72rem', fontWeight: '800', letterSpacing: '1px', textTransform: 'uppercase', boxShadow: '0 4px 14px rgba(168, 85, 247, 0.4)' }}>
+                ✦ ACCOUNTS
+              </div>
+              <div style={{ width: '150px', height: '190px', margin: '14px auto 20px', borderRadius: '16px', overflow: 'hidden', border: '2px solid rgba(168, 85, 247, 0.45)', boxShadow: '0 8px 28px rgba(147, 51, 234, 0.28)', background: '#0a0414' }}>
+                <img src={kavyaPhoto} alt="Kavya - Accounts at Movegrid Solutions" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 15%', display: 'block' }} />
+              </div>
+              <h3 style={{ fontSize: '1.5rem', marginBottom: '4px', color: '#ffffff' }}>Kavya</h3>
+              <p style={{ color: 'var(--primary)', fontWeight: '600', fontSize: '0.92rem', marginBottom: '14px' }}>Accounts</p>
+              <p style={{ fontSize: '0.92rem', color: 'var(--text-muted)', lineHeight: '1.6' }}>
+                Overseeing financial records, client billing, invoicing, budgeting, accounts payable and receivable to ensure seamless financial operations and compliance.
               </p>
             </div>
           </div>
