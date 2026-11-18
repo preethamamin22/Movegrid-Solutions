@@ -22,6 +22,7 @@ import { ServiceCard } from '@/components/service-card';
 import { PortfolioGrid } from '@/components/portfolio-grid';
 import { ContactForm } from '@/components/contact-form';
 import { DarkStoreCalculator } from '@/components/dark-store-calculator';
+import { TrustedBy } from '@/components/trusted-by';
 
 export default function Home() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
@@ -117,6 +118,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* ── TRUSTED BY SECTION ─────────────────────────────────── */}
+      <TrustedBy />
 
       {/* ── ENTERPRISE FLEET OPERATIONS SPOTLIGHT ───────────────── */}
       <section id="fleet-operations" className="py-20 border-t border-white/5 bg-[#060B16] relative">

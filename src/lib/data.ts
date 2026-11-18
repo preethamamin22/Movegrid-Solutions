@@ -135,19 +135,23 @@ export type Project = {
   metric?: string;
   impact?: string;
   stack?: string[];
+  clientUrl?: string;
+  clientName?: string;
 };
 
 export const projects: Project[] = [
   {
-    title: 'Next-Gen Quick Commerce Web Platform',
-    type: 'Web Development',
+    title: 'Xennov Scientific — Corporate Digital Platform',
+    type: 'Web Engineering & Architecture',
     tag: 'Digital Studio',
     number: '01',
     tone: 'blue',
-    metric: 'Sub-Second Search',
-    impact: 'High-performance quick-commerce web architecture with geo-fenced catalog discovery and instant checkout flows.',
-    stack: ['Next.js 15', 'TypeScript', 'Tailwind CSS', 'Edge APIs'],
-    placeholder: true,
+    metric: 'Enterprise Scientific Portal',
+    impact: 'End-to-end scientific research instrumentation showcase, responsive product catalog, and global business inquiry engine.',
+    stack: ['Corporate Web Platform', 'Product Catalog', 'Responsive UI/UX', 'SEO Optimization'],
+    clientUrl: 'https://www.xennovscientific.com/',
+    clientName: 'Xennov Scientific',
+    placeholder: false,
   },
   {
     title: 'Quick-Commerce Dark Store Fleet Mobilization (Bengaluru & NCR)',

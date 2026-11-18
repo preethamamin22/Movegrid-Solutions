@@ -6,10 +6,10 @@ import {
   ArrowRight,
   ArrowUpRight,
   CheckCircle,
+  CheckCircle2,
   MessageCircle,
   Mail,
   ShieldCheck,
-  Sparkles,
   HelpCircle,
 } from 'lucide-react';
 import { services } from '@/lib/data';
@@ -93,7 +93,7 @@ export default async function ServicePage({
           {slug === 'rider-onboarding' && (
             <div className="p-4 rounded-xl bg-cyan-950/40 border border-cyan-500/30 mb-8 max-w-2xl">
               <div className="text-xs font-bold uppercase tracking-wider text-cyan-400 mb-1 flex items-center gap-1.5">
-                <Sparkles size={13} />
+                <ShieldCheck size={14} />
                 <span>Quick-Commerce &amp; Dark Store Logistics Ready</span>
               </div>
               <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
@@ -181,7 +181,7 @@ export default async function ServicePage({
                         key={idx}
                         className="p-5 rounded-xl bg-[#080E1E] border border-white/10"
                       >
-                        <Sparkles size={18} className="text-sky-400 mb-3" />
+                        <CheckCircle2 size={18} className="text-sky-400 mb-3" />
                         <h4 className="text-sm font-bold text-white mb-1.5">
                           {b.title}
                         </h4>

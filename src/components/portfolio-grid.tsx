@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { ArrowUpRight, Sparkles, Layers, Workflow, TrendingUp, CheckCircle2 } from 'lucide-react';
+import { ArrowUpRight, Layers, Workflow, TrendingUp, CheckCircle2 } from 'lucide-react';
 import { categories, projects, type Project } from '@/lib/data';
 
 export function PortfolioGrid() {
@@ -113,7 +113,7 @@ export function PortfolioGrid() {
                 {/* Metric Callout Pill */}
                 {p.metric && (
                   <div className="mb-5 p-2.5 rounded-xl bg-white/[0.02] border border-white/5 flex items-center gap-2">
-                    <Sparkles size={13} className="text-cyan-400 shrink-0" />
+                    <CheckCircle2 size={13} className="text-cyan-400 shrink-0" />
                     <span className="text-xs font-semibold text-white">{p.metric}</span>
                   </div>
                 )}
@@ -137,19 +137,34 @@ export function PortfolioGrid() {
               <div className="relative z-10 pt-4 border-t border-white/5 flex items-center justify-between">
                 <span className="text-[11px] text-slate-400 font-mono flex items-center gap-1.5">
                   <CheckCircle2 size={12} className="text-emerald-400" />
-                  <span>Production Ready</span>
+                  <span>{p.placeholder ? 'Concept Prototype' : 'Verified Client Partner'}</span>
                 </span>
 
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center gap-1 text-xs font-semibold text-blue-400 group-hover:text-white transition-colors"
-                >
-                  <span>Inquire Now</span>
-                  <ArrowUpRight
-                    size={14}
-                    className="transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                  />
-                </Link>
+                {p.clientUrl ? (
+                  <a
+                    href={p.clientUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-xs font-semibold text-cyan-400 hover:text-white transition-colors"
+                  >
+                    <span>Visit Live Site</span>
+                    <ArrowUpRight
+                      size={14}
+                      className="transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                    />
+                  </a>
+                ) : (
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center gap-1 text-xs font-semibold text-blue-400 group-hover:text-white transition-colors"
+                  >
+                    <span>Inquire Now</span>
+                    <ArrowUpRight
+                      size={14}
+                      className="transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                    />
+                  </Link>
+                )}
               </div>
             </article>
           );

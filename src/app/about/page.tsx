@@ -9,6 +9,7 @@ import {
   Users2,
   Award,
 } from 'lucide-react';
+import { TrustedBy } from '@/components/trusted-by';
 
 export const metadata: Metadata = {
   title: 'About Us — Movegrid Solutions',
@@ -193,6 +194,9 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      {/* ── Client Partnerships ─────────────────────────────── */}
+      <TrustedBy />
 
       {/* ── CTA Band ────────────────────────────────────────── */}
       <section className="section-pad border-t border-white/5 bg-[#020612] text-center">
