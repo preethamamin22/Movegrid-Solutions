@@ -13,6 +13,37 @@ export default function Home() {
     setOpenFaq(openFaq === index ? null : index);
   };
 
+  const trustedClients = [
+    {
+      name: 'ZenNuc™',
+      domain: 'zennuc.com',
+      url: 'https://zennuc.com',
+      badgeText: 'ZN',
+      domainColor: '#38bdf8',
+    },
+    {
+      name: 'XenNov Scientific',
+      domain: 'xennovscientific.com',
+      url: 'https://www.xennovscientific.com/',
+      logoImg: '/logos/xennov-logo.svg',
+      domainColor: '#14b8a6',
+    },
+    {
+      name: 'Shree Varaha',
+      domain: 'shreevaraha.com',
+      url: 'https://shreevaraha.com',
+      logoImg: '/logos/shreevaraha-logo.png',
+      domainColor: '#38bdf8',
+    },
+    {
+      name: 'Ananya Homestays',
+      domain: 'ananyahomestays.com',
+      url: 'https://www.ananyahomestays.com',
+      logoImg: '/logos/ananya-transparent.png',
+      domainColor: '#4ade80',
+    },
+  ];
+
   return (
     <div className="home-page">
       <SEO 
@@ -59,29 +90,7 @@ export default function Home() {
           {/* First Track */}
           <div className="marquee-content">
             {[1, 2, 3].map((set) => (
-              [
-                {
-                  name: 'ZenNuc™',
-                  domain: 'zennuc.com',
-                  url: 'https://zennuc.com',
-                  badgeText: 'ZN',
-                  domainColor: '#38bdf8',
-                },
-                {
-                  name: 'Shree Varaha',
-                  domain: 'shreevaraha.com',
-                  url: 'https://shreevaraha.com',
-                  logoImg: '/logos/shreevaraha-logo.png',
-                  domainColor: '#38bdf8',
-                },
-                {
-                  name: 'Ananya Homestays',
-                  domain: 'ananyahomestays.com',
-                  url: 'https://www.ananyahomestays.com',
-                  logoImg: '/logos/ananya-transparent.png',
-                  domainColor: '#4ade80',
-                },
-              ].map((client, idx) => (
+              trustedClients.map((client, idx) => (
                 <a
                   key={`track1-${set}-${idx}`}
                   href={client.url}
@@ -139,29 +148,7 @@ export default function Home() {
           {/* Second Track (for infinite loop) */}
           <div className="marquee-content" aria-hidden="true">
             {[1, 2, 3].map((set) => (
-              [
-                {
-                  name: 'ZenNuc™',
-                  domain: 'zennuc.com',
-                  url: 'https://zennuc.com',
-                  badgeText: 'ZN',
-                  domainColor: '#38bdf8',
-                },
-                {
-                  name: 'Shree Varaha',
-                  domain: 'shreevaraha.com',
-                  url: 'https://shreevaraha.com',
-                  logoImg: '/logos/shreevaraha-logo.png',
-                  domainColor: '#38bdf8',
-                },
-                {
-                  name: 'Ananya Homestays',
-                  domain: 'ananyahomestays.com',
-                  url: 'https://www.ananyahomestays.com',
-                  logoImg: '/logos/ananya-transparent.png',
-                  domainColor: '#4ade80',
-                },
-              ].map((client, idx) => (
+              trustedClients.map((client, idx) => (
                 <a
                   key={`track2-${set}-${idx}`}
                   href={client.url}
